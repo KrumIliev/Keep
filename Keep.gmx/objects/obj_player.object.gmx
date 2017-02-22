@@ -30,7 +30,11 @@
 phy_fixed_rotation = true;
 image_speed = 0;
 
+var_horisontal_speed = 0;
+var_vertical_speed = 0;
+var_length = 0;
 var_speed = 6;
+
 state = scr_state_move;
 </string>
           </argument>
