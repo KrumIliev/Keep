@@ -3,3 +3,14 @@ key_right = keyboard_check(vk_right);
 key_left = keyboard_check(vk_left);
 key_up = keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
+
+// Get the axis
+xaxis = (key_right - key_left); 
+yaxis = (key_down - key_up);
+
+// Check for gamepad input 
+if (gamepad_is_connected(0)) {
+    gamepad_set_axis_deadzone(0, .35);
+    xaxis = gamepad_axis_value(0, gp_axislh);
+    yaxis = gamepad_axis_value(0, gp_axislv);
+}

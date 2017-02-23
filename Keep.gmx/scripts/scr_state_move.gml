@@ -3,10 +3,6 @@
 // Get the input
 scr_get_input(); 
 
-// Get the axis
-var xaxis = (key_right - key_left);
-var yaxis = (key_down - key_up);
-
 // Get direction
 var dir = point_direction(0, 0, xaxis, yaxis);
 
