@@ -28,8 +28,11 @@
             <string>/// Move camera 
 
 // Move formula -&gt; current += (target + current) * .1;
-x += (obj_player.x - x) * .1;
-y += (obj_player.y - y) * .1;
+if (instance_exists(obj_player)) {
+    x += (obj_player.x - x) * .1;
+    y += (obj_player.y - y) * .1;
+}
+
 </string>
           </argument>
         </arguments>

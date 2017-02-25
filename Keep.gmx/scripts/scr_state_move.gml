@@ -8,6 +8,11 @@ if (key_dash) {
     alarm[0] = room_speed / 6;
 }
 
+if (key_attack) {
+    image_index = 0;
+    state = scr_state_attack;
+}
+
 // Get direction
 var_direction = point_direction(0, 0, var_xaxis, var_yaxis);
 
