@@ -1,5 +1,10 @@
 ///scr_state_dash
 
+// Fixes the dashing if the player is standing still 
+if (var_length == 0) {
+    var_direction = var_face * 90;
+}
+
 var_length = var_speed * 4;
 
 // Get horisontal and vertical speed

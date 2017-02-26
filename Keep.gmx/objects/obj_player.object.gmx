@@ -34,6 +34,7 @@ var_horisontal_speed = 0;
 var_vertical_speed = 0;
 var_length = 0;
 var_direction = 0;
+var_face = RIGHT;
 var_xaxis = 0;
 var_yaxis = 0;
 
@@ -87,8 +88,12 @@ state = scr_state_move;
           <argument>
             <kind>1</kind>
             <string>/// Move player
-event_inherited();
+depth = -y;
 script_execute(state);
+
+if (obj_player_stats.player_hp &lt;= 0) {
+    instance_destroy();
+}
 
 
 

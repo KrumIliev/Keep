@@ -3,9 +3,11 @@
 // Get the input
 scr_get_input(); 
 
-if (key_dash) {
+if (key_dash && obj_player_stats.player_stamina >= 5) {
     state = scr_state_dash;
     alarm[0] = room_speed / 6;
+    obj_player_stats.player_stamina -= DASH_COST;
+    obj_player_stats.alarm[0] = room_speed * 5;
 }
 
 if (key_attack) {
@@ -21,6 +23,7 @@ if (var_xaxis == 0 && var_yaxis == 0) {
     var_length = 0;
 } else {
     var_length = var_speed;
+    scr_get_face(); // Get the direction we are facing only if moving
 }
 
 // Get horisontal and vertical speed
@@ -36,13 +39,21 @@ image_speed = .4;
 if (var_length == 0) {
     image_index = 0;
 }
-if (var_vertical_speed > 0) {
-    sprite_index = spr_player_down;
-} else if (var_vertical_speed < 0) {
-    sprite_index = spr_player_up;
-}
-if (var_horisontal_speed > 0) {
-    sprite_index = spr_player_right;
-} else if (var_horisontal_speed < 0) {
-    sprite_index = spr_player_left;
+
+switch (var_face) {
+    case RIGHT:
+        sprite_index = spr_player_right;
+        break;
+        
+    case LEFT:
+        sprite_index = spr_player_left;
+        break;
+        
+    case UP:
+        sprite_index = spr_player_up;
+        break;
+        
+    case DOWN:
+        sprite_index = spr_player_down;
+        break;
 }

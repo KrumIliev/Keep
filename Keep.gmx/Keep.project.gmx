@@ -32,13 +32,32 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_get_input.gml</script>
-    <script>scripts\scr_state_move.gml</script>
-    <script>scripts\scr_state_dash.gml</script>
-    <script>scripts\scr_state_attack.gml</script>
+    <scripts name="player">
+      <scripts name="states">
+        <script>scripts\scr_state_move.gml</script>
+        <script>scripts\scr_state_dash.gml</script>
+        <script>scripts\scr_state_attack.gml</script>
+      </scripts>
+      <scripts name="utils">
+        <script>scripts\scr_get_input.gml</script>
+        <script>scripts\scr_get_face.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="enemies">
+      <scripts name="utils">
+        <script>scripts\scr_enemy_next_state.gml</script>
+        <script>scripts\scr_enemy_check_for_player.gml</script>
+        <script>scripts\scr_enemy_move.gml</script>
+      </scripts>
+      <scripts name="states">
+        <script>scripts\scr_state_emeny_chase.gml</script>
+        <script>scripts\scr_state_enemy_wander.gml</script>
+        <script>scripts\scr_state_enemy_idle.gml</script>
+        <script>scripts\scr_state_enemy_stall.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_spider</object>
     <object>objects\obj_life_form</object>
@@ -46,6 +65,10 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_dash_effect</object>
       <object>objects\obj_damage</object>
+    </objects>
+    <objects name="player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_player_stats</object>
     </objects>
   </objects>
   <rooms name="rooms">
