@@ -20,9 +20,11 @@
     <sprites name="enemies">
       <sprites name="spider">
         <sprite>sprites\spr_spider_move_down</sprite>
-        <sprite>sprites\spr_spider_move_left</sprite>
         <sprite>sprites\spr_spider_move_right</sprite>
         <sprite>sprites\spr_spider_move_up</sprite>
+        <sprite>sprites\spr_spider_idle_down</sprite>
+        <sprite>sprites\spr_spider_idle_up</sprite>
+        <sprite>sprites\spr_spider_idle_right</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
@@ -34,6 +36,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_get_face.gml</script>
     <scripts name="player">
       <scripts name="states">
         <script>scripts\scr_state_move.gml</script>
@@ -42,7 +45,6 @@
       </scripts>
       <scripts name="utils">
         <script>scripts\scr_get_input.gml</script>
-        <script>scripts\scr_get_face.gml</script>
         <script>scripts\scr_interact_speaker.gml</script>
         <script>scripts\scr_string_copy_words.gml</script>
         <script>scripts\scr_fire_projectile.gml</script>
