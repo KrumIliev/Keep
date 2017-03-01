@@ -26,6 +26,8 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
+    <sprite>sprites\spr_sign</sprite>
+    <sprite>sprites\spr_dialog_window</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -41,6 +43,9 @@
       <scripts name="utils">
         <script>scripts\scr_get_input.gml</script>
         <script>scripts\scr_get_face.gml</script>
+        <script>scripts\scr_interact_speaker.gml</script>
+        <script>scripts\src_animate_player.gml</script>
+        <script>scripts\scr_string_copy_words.gml</script>
       </scripts>
     </scripts>
     <scripts name="enemies">
@@ -70,6 +75,9 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player_stats</object>
     </objects>
+    <object>objects\obj_speaker</object>
+    <object>objects\obj_dialog</object>
+    <object>objects\obj_sign</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
