@@ -1,4 +1,5 @@
 ///scr_state_dash
+var_action = MOVE;
 
 // Fixes the dashing if the player is standing still 
 if (var_length == 0) {

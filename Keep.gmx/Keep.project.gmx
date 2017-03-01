@@ -44,7 +44,6 @@
         <script>scripts\scr_get_input.gml</script>
         <script>scripts\scr_get_face.gml</script>
         <script>scripts\scr_interact_speaker.gml</script>
-        <script>scripts\src_animate_player.gml</script>
         <script>scripts\scr_string_copy_words.gml</script>
         <script>scripts\scr_fire_projectile.gml</script>
       </scripts>

@@ -1,4 +1,5 @@
 ///scr_state_move
+var_action = MOVE;
 
 // Get the input
 scr_get_input(); 
@@ -39,4 +40,7 @@ phy_position_x += var_horisontal_speed;
 phy_position_y += var_vertical_speed;
 
 // Animate player
-src_animate_player();
+image_speed = .4;
+if (var_length == 0) {
+    image_index = 0;
+}

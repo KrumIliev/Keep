@@ -34,13 +34,26 @@ var_horisontal_speed = 0;
 var_vertical_speed = 0;
 var_length = 0;
 var_direction = 0;
-var_face = RIGHT;
 var_xaxis = 0;
 var_yaxis = 0;
-
 var_is_attacking = false;
 
 state = scr_state_move;
+
+var_face = RIGHT;
+var_action = MOVE;
+
+// Create the sprite array
+sprite[RIGHT, MOVE] = spr_player_right;
+sprite[LEFT, MOVE] = spr_player_left;
+sprite[UP, MOVE] = spr_player_up;
+sprite[DOWN, MOVE] = spr_player_down;
+
+sprite[RIGHT, ATTACK] = spr_player_attack_right;
+sprite[LEFT, ATTACK] = spr_player_attack_left;
+sprite[UP, ATTACK] = spr_player_attack_up;
+sprite[DOWN, ATTACK] = spr_player_attack_down;
+
 </string>
           </argument>
         </arguments>
@@ -90,6 +103,8 @@ state = scr_state_move;
             <string>/// Move player
 depth = -y;
 script_execute(state);
+
+sprite_index = sprite[var_face, var_action];
 
 if (obj_player_stats.player_hp &lt;= 0) {
     instance_destroy();
