@@ -46,6 +46,7 @@
         <script>scripts\scr_interact_speaker.gml</script>
         <script>scripts\src_animate_player.gml</script>
         <script>scripts\scr_string_copy_words.gml</script>
+        <script>scripts\scr_fire_projectile.gml</script>
       </scripts>
     </scripts>
     <scripts name="enemies">
@@ -75,9 +76,12 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player_stats</object>
     </objects>
-    <object>objects\obj_speaker</object>
-    <object>objects\obj_dialog</object>
-    <object>objects\obj_sign</object>
+    <objects name="text">
+      <object>objects\obj_speaker</object>
+      <object>objects\obj_dialog</object>
+      <object>objects\obj_sign</object>
+    </objects>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

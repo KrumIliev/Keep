@@ -5,6 +5,7 @@ key_up = keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
 key_dash = keyboard_check_pressed(ord('C'));
 key_attack = keyboard_check_pressed(ord('X'));
+key_spell = keyboard_check_pressed(ord('V'));
 
 // Get the axis
 var_xaxis = (key_right - key_left); 
@@ -17,4 +18,5 @@ if (gamepad_is_connected(0)) {
     var_yaxis = gamepad_axis_value(0, gp_axislv);
     key_dash = gamepad_button_check_pressed(0, gp_face1);
     key_attack = gamepad_button_check_pressed(0, gp_face3);
+    key_spell = gamepad_button_check_pressed(0, gp_face2);
 }

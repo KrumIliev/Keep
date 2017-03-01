@@ -15,6 +15,10 @@ if (key_attack) {
     state = scr_state_attack;
 }
 
+if (key_spell) {
+    scr_fire_projectile(instance_create(x, y, obj_projectile));
+}
+
 // Get direction
 var_direction = point_direction(0, 0, var_xaxis, var_yaxis);
 
