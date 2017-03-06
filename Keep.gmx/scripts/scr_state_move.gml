@@ -44,3 +44,8 @@ image_speed = .4;
 if (var_length == 0) {
     image_index = 0;
 }
+
+if (key_slash && !var_is_attacking) {
+    instance_create(x, y, obj_attack_slash);
+    var_is_attacking = true;
+}

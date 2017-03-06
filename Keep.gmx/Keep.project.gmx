@@ -30,6 +30,7 @@
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_dialog_window</sprite>
+    <sprite>sprites\spr_slash</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -72,6 +73,7 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_dash_effect</object>
       <object>objects\obj_damage</object>
+      <object>objects\obj_attack_slash</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>

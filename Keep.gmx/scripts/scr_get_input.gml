@@ -6,6 +6,7 @@ key_down = keyboard_check(vk_down);
 key_dash = keyboard_check_pressed(ord('C'));
 key_attack = keyboard_check_pressed(ord('X'));
 key_spell = keyboard_check_pressed(ord('V'));
+key_slash = keyboard_check(ord('S'));
 
 // Get the axis
 var_xaxis = (key_right - key_left); 

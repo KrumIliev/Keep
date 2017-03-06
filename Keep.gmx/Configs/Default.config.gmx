@@ -651,7 +651,7 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="8">
+    <constants number="13">
       <constant name="RIGHT">0</constant>
       <constant name="UP">1</constant>
       <constant name="LEFT">2</constant>
@@ -660,6 +660,11 @@
       <constant name="MOVE">0</constant>
       <constant name="ATTACK">1</constant>
       <constant name="IDLE">2</constant>
+      <constant name="SLASH_OFFSET_RIGHT">35</constant>
+      <constant name="SLASH_OFFSET_LEFT">-35</constant>
+      <constant name="SLASH_OFFSET_UP">-35</constant>
+      <constant name="SLASH_OFFSET_DOWN">35</constant>
+      <constant name="SLASH_OFFSET_RESET">0</constant>
     </constants>
   </ConfigConstants>
 </Config>
