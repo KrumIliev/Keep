@@ -31,6 +31,9 @@
     <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_dialog_window</sprite>
     <sprite>sprites\spr_slash</sprite>
+    <sprite>sprites\spr_ground_dirt</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_floor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -85,8 +88,14 @@
       <object>objects\obj_sign</object>
     </objects>
     <object>objects\obj_projectile</object>
+    <objects name="dungeon">
+      <object>objects\obj_floor_handler</object>
+      <object>objects\obj_wall_handler</object>
+    </objects>
+    <object>objects\obj_floor</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_generator</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
