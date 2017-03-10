@@ -32,8 +32,6 @@
     <sprite>sprites\spr_dialog_window</sprite>
     <sprite>sprites\spr_slash</sprite>
     <sprite>sprites\spr_ground_dirt</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_floor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -67,6 +65,13 @@
         <script>scripts\scr_state_enemy_stall.gml</script>
       </scripts>
     </scripts>
+    <scripts name="generator">
+      <script>scripts\scr_place_floor.gml</script>
+      <script>scripts\scr_place_wall.gml</script>
+      <script>scripts\scr_print_grid.gml</script>
+      <script>scripts\scr_add_to_grid.gml</script>
+      <script>scripts\scr_check_grid.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -89,8 +94,9 @@
     </objects>
     <object>objects\obj_projectile</object>
     <objects name="dungeon">
-      <object>objects\obj_floor_handler</object>
-      <object>objects\obj_wall_handler</object>
+      <object>objects\obj_floor_generator</object>
+      <object>objects\obj_wall_generator</object>
+      <object>objects\obj_level_generator</object>
     </objects>
     <object>objects\obj_floor</object>
   </objects>

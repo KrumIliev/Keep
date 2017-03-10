@@ -651,7 +651,7 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="13">
+    <constants number="16">
       <constant name="RIGHT">0</constant>
       <constant name="UP">1</constant>
       <constant name="LEFT">2</constant>
@@ -665,6 +665,9 @@
       <constant name="SLASH_OFFSET_UP">-35</constant>
       <constant name="SLASH_OFFSET_DOWN">35</constant>
       <constant name="SLASH_OFFSET_RESET">0</constant>
+      <constant name="GENERATOR_EMPTY">-1</constant>
+      <constant name="GENERATOR_FLOOR">0</constant>
+      <constant name="GENERATOR_WALL">1</constant>
     </constants>
   </ConfigConstants>
 </Config>
