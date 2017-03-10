@@ -58,6 +58,7 @@ start_x = x - 32;
             <string>scr_place_wall();
 
 if (y  &gt; stop_y) {
+    scr_add_player();
     scr_print_grid(obj_level_generator.level, obj_level_generator.objects);
     room_speed = 60;
     instance_destroy();

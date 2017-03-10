@@ -32,6 +32,7 @@
     <sprite>sprites\spr_dialog_window</sprite>
     <sprite>sprites\spr_slash</sprite>
     <sprite>sprites\spr_ground_dirt</sprite>
+    <sprite>sprites\spr_wall_yellow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -71,6 +72,8 @@
       <script>scripts\scr_print_grid.gml</script>
       <script>scripts\scr_add_to_grid.gml</script>
       <script>scripts\scr_check_grid.gml</script>
+      <script>scripts\scr_add_player.gml</script>
+      <script>scripts\scr_add_wall.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

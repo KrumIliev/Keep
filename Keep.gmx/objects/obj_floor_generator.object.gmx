@@ -52,6 +52,8 @@ y_start = y;
 x_stop = 0;
 y_stop = 0;
 
+object_set_visible(obj_player_stats, false);
+
 // Genration speed 
 room_speed = 1200;
 </string>
