@@ -29,7 +29,7 @@
 
 // How many floor tiles have been placed?
 floors_placed = 0;
-floors_max = 3000;
+floors_max = 800;
 
 // Direction
 dir = 1;
@@ -37,22 +37,9 @@ dir = 1;
 // Randomize the seed 
 randomize();
 
-// Generate a random position 
-rand_x = random_range(1, (room_width - 64) / 32);
-rand_y = random_range(1, (room_height - 64) / 32);
-
 // Attach values to the grid 
-x = floor(random_range(1, ((room_width - 64) / 32))) * 32;
-y = floor(random_range(1, ((room_height - 64) / 32))) * 32;
-
-// Store the top left corner of the map 
-// This is nessery for the wall handler to not itarate thru the entire room
-x_start = x;
-y_start = y;
-x_stop = 0;
-y_stop = 0;
-
-object_set_visible(obj_player_stats, false);
+x = floor(random_range(1, ((room_width - 128) / 64))) * 64;
+y = floor(random_range(1, ((room_height - 128) / 64))) * 64;
 
 // Genration speed 
 room_speed = 1200;
@@ -78,13 +65,52 @@ room_speed = 1200;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_place_floor();
+            <string>// Place the floor tile 
+if (scr_check_grid(x, y)) {
+    instance_create(x, y, obj_floor);
+    scr_add_to_grid(x, y, GENERATOR_FLOOR);
+    instance_create(x + 32, y, obj_floor);
+    scr_add_to_grid(x + 32, y, GENERATOR_FLOOR);
+    instance_create(x, y + 32, obj_floor);
+    scr_add_to_grid(x, y + 32, GENERATOR_FLOOR);
+    instance_create(x + 32, y + 32, obj_floor);
+    scr_add_to_grid(x + 32, y + 32, GENERATOR_FLOOR);
+}
+
+// Add to floor tiles count
+floors_placed++;
+
+// Pick a random direction
+dir = choose(1, 2, 3, 4, dir, dir, dir, dir);
+
+// Move forward 1 cell
+switch (dir) {
+    case 1:
+        x += 64;
+        break;
+        
+    case 2:
+        y += 64;
+        break;
+    
+    case 3: 
+        x -= 64;
+        break;
+        
+    case 4:
+        y -= 64;
+        break;
+}
+
+// Check for being outside the room 
+if (x &lt; 64) { x = 64 }
+if (x &gt; room_width - 128){ x = room_width - 128; }
+if (y &lt; 64) { y = 64; }
+if (y &gt; room_height - 128) { y = room_height - 128; }
 
 // Destroy if max floors have been placed 
 if (floors_placed == floors_max) {
-    wall_p = instance_create(x_start, y_start, obj_wall_generator);
-    wall_p.stop_x = x_stop;
-    wall_p.stop_y = y_stop;
+    instance_create(0, 0, obj_wall_generator);
     instance_destroy();
 }
 </string>
