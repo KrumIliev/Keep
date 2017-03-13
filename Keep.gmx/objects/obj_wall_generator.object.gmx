@@ -32,6 +32,7 @@ if (y  &gt; room_height) {
     scr_add_player();
     scr_print_grid(obj_level_generator.level, obj_level_generator.objects);
     room_speed = 60;
+    instance_create(0, 0, obj_enemy_spawn_timer);
     instance_destroy();
 }
 </string>

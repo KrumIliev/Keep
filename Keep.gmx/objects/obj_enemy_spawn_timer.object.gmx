@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,37 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Stats
-player_hp = 5;
-player_max_hp = player_hp;
-player_stamina = 10;
-player_max_stamina = player_stamina;
-
-player_slash_timer = 30;
-player_slash_dps = 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Stamina regen
+            <string>time = 9;
+visible_time = time;
+color = c_white;
 </string>
           </argument>
         </arguments>
@@ -78,14 +50,18 @@ player_slash_dps = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check stats 
-if (player_hp &lt; 0) {
-    player_hp = 0;
+            <string>/// decrement the timer
+if (time &gt; 0) {
+    time = time - delta_time / 1000000;
+    visible_time = ceil(time);
+} else {
+    instance_destroy();
 }
 
-if (player_stamina &lt; player_max_stamina &amp;&amp; alarm[0] == -1) {
-    player_stamina++;
+if (time &lt; 3) {
+    color = c_red;
 }
+
 </string>
           </argument>
         </arguments>
@@ -108,12 +84,12 @@ if (player_stamina &lt; player_max_stamina &amp;&amp; alarm[0] == -1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the stats
-draw_set_font(fnt_keep_medium);
-draw_set_colour(c_white);
-draw_set_halign(fa_left);
-draw_text(32, 32, "Health: " + string(player_hp) + "/" + string(player_max_hp));
-draw_text(32, 50, "Stamina: " + string(player_stamina) + "/" + string(player_max_stamina));
+            <string>draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(fnt_keep_large);
+draw_set_colour(color);
+draw_text(view_xport[0] + view_wport[0]/2, view_yport[0] + view_hport[0]/2, "Wave starts in " + string(visible_time));
+
 </string>
           </argument>
         </arguments>

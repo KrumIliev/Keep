@@ -58,6 +58,9 @@ margin = 8;
           <argument>
             <kind>1</kind>
             <string>/// Draw the dialog 
+draw_set_font(fnt_keep_small);
+draw_set_colour(c_white);
+
 // Get the last space 
 if (string_char_at(text[text_page], text_count) == " ") {
     last_space = text_count;

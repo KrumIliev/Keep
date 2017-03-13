@@ -89,6 +89,11 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_keep_medium</font>
+    <font>fonts\fnt_keep_large</font>
+    <font>fonts\fnt_keep_small</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_wall</object>
     <object>objects\obj_spider</object>
@@ -113,13 +118,14 @@
       <object>objects\obj_wall_generator</object>
       <object>objects\obj_level_generator</object>
       <object>objects\obj_floor_generator</object>
+      <object>objects\obj_enemy_spawn_timer</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_portal</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_generator</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_generator</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
