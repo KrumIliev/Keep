@@ -27,6 +27,15 @@
             <kind>1</kind>
             <string>/// Init the generator
 num_portals = 3;
+
+// Sprite map
+tileset[0] = spr_wall_green;
+tileset[1] = spr_wall_stone;
+// Pick random tileset
+randomize();
+t_set = tileset[irandom_range(0, array_length_1d(tileset) - 1)];
+
+// Level map
 level[0, 0] = GENERATOR_EMPTY;
 objects = 0;
 

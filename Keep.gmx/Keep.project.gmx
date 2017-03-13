@@ -29,8 +29,9 @@
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_dialog_window</sprite>
     <sprites name="tiles">
-      <sprite>sprites\spr_wall_yellow</sprite>
       <sprite>sprites\spr_ground_dirt</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_wall_green</sprite>
       <sprite>sprites\spr_wall_stone</sprite>
     </sprites>
     <sprites name="objects">
@@ -86,6 +87,7 @@
         <script>scripts\scr_check_grid.gml</script>
         <script>scripts\scr_add_to_grid.gml</script>
         <script>scripts\scr_print_grid.gml</script>
+        <script>scripts\scr_create_wall.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -119,13 +121,14 @@
       <object>objects\obj_level_generator</object>
       <object>objects\obj_floor_generator</object>
       <object>objects\obj_enemy_spawn_timer</object>
+      <object>objects\obj_wall_finisher</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_portal</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_generator</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

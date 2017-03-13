@@ -25,10 +25,65 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_add_wall();
+            <string>/// Add the rest of the walls 
+
+var target = instance_place(x, y, obj_wall);
+var wall = noone;
+var ground = noone;
+var index_top = 0;
+var index_bottom = 0;
+
+if (instance_exists(target) &amp;&amp; 
+    (target.image_index == 1 
+    || target.image_index == 10 
+    || target.image_index == 11)) {
+    
+    // Check if its a corner or middle tile
+    if (place_meeting(x - 32, y, obj_floor)) {
+        index_top = 13;
+        index_bottom = 16;
+        
+    } else if (place_meeting(x + 32, y, obj_floor)) {
+        index_top = 15;
+        index_bottom = 18;
+        
+    } else {
+        index_top = 14;
+        index_bottom = 17;
+    }
+    
+    // Remove ground objects below
+    ground = instance_place(x, y + 32, obj_floor);
+    with (ground) {
+        instance_destroy();
+    }
+        
+    ground = instance_place(x, y + 64, obj_floor);
+    with (ground) {
+        instance_destroy();
+    }
+        
+    // Add the walls
+    wall = scr_create_wall(x, y + 32, obj_level_generator.t_set);
+    wall.image_index = index_top;
+        
+    wall = scr_create_wall(x, y + 64, obj_level_generator.t_set);
+    wall.image_index = index_bottom;
+}
+
+if (x &gt;= room_width) { 
+    y += 32; 
+    x = 0; 
+} else {
+    x += 32;
+}
 
 if (y  &gt; room_height) {
-    instance_create(0, 0, obj_wall_finisher);
+    scr_add_portals();
+    scr_add_player();
+    scr_print_grid(obj_level_generator.level, obj_level_generator.objects);
+    room_speed = 60;
+    instance_create(0, 0, obj_enemy_spawn_timer);
     instance_destroy();
 }
 
