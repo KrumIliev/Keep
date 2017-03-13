@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_wall_stone</sprite>
     <sprites name="player">
       <sprite>sprites\spr_player_down</sprite>
       <sprite>sprites\spr_player_left</sprite>
@@ -28,11 +27,22 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
-    <sprite>sprites\spr_sign</sprite>
     <sprite>sprites\spr_dialog_window</sprite>
-    <sprite>sprites\spr_slash</sprite>
-    <sprite>sprites\spr_ground_dirt</sprite>
-    <sprite>sprites\spr_wall_yellow</sprite>
+    <sprites name="tiles">
+      <sprite>sprites\spr_wall_yellow</sprite>
+      <sprite>sprites\spr_ground_dirt</sprite>
+      <sprite>sprites\spr_wall_stone</sprite>
+    </sprites>
+    <sprites name="objects">
+      <sprites name="portal">
+        <sprite>sprites\spr_portal</sprite>
+        <sprite>sprites\spr_portal_active</sprite>
+      </sprites>
+      <sprite>sprites\spr_sign</sprite>
+    </sprites>
+    <sprites name="effects">
+      <sprite>sprites\spr_slash</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -67,13 +77,16 @@
       </scripts>
     </scripts>
     <scripts name="generator">
-      <script>scripts\scr_place_floor.gml</script>
-      <script>scripts\scr_place_wall.gml</script>
-      <script>scripts\scr_print_grid.gml</script>
-      <script>scripts\scr_add_to_grid.gml</script>
-      <script>scripts\scr_check_grid.gml</script>
+      <script>scripts\scr_add_wall.gml</script>
       <script>scripts\scr_add_player.gml</script>
-      <script>scripts\scr_get_wall_sprite.gml</script>
+      <script>scripts\scr_add_portals.gml</script>
+      <scripts name="utls">
+        <script>scripts\scr_get_wall_sprite.gml</script>
+        <script>scripts\scr_find_free_location.gml</script>
+        <script>scripts\scr_check_grid.gml</script>
+        <script>scripts\scr_add_to_grid.gml</script>
+        <script>scripts\scr_print_grid.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -102,6 +115,7 @@
       <object>objects\obj_floor_generator</object>
     </objects>
     <object>objects\obj_floor</object>
+    <object>objects\obj_portal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_generator</room>

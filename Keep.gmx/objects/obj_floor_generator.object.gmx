@@ -29,7 +29,7 @@
 
 // How many floor tiles have been placed?
 floors_placed = 0;
-floors_max = 800;
+floors_max = 850;
 
 // Direction
 dir = 1;
@@ -66,13 +66,22 @@ room_speed = 1200;
           <argument>
             <kind>1</kind>
             <string>// Place the floor tile 
-if (scr_check_grid(x, y)) {
+if (scr_check_grid(x, y, GENERATOR_EMPTY)) {
     instance_create(x, y, obj_floor);
     scr_add_to_grid(x, y, GENERATOR_FLOOR);
+}
+
+if (scr_check_grid(x + 32, y, GENERATOR_EMPTY)) {
     instance_create(x + 32, y, obj_floor);
     scr_add_to_grid(x + 32, y, GENERATOR_FLOOR);
+}
+
+if (scr_check_grid(x, y + 32, GENERATOR_EMPTY)) {
     instance_create(x, y + 32, obj_floor);
     scr_add_to_grid(x, y + 32, GENERATOR_FLOOR);
+}
+
+if (scr_check_grid(x + 32, y + 32, GENERATOR_EMPTY)) {
     instance_create(x + 32, y + 32, obj_floor);
     scr_add_to_grid(x + 32, y + 32, GENERATOR_FLOOR);
 }

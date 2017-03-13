@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Init the generator
+num_portals = 3;
 level[0, 0] = GENERATOR_EMPTY;
 objects = 0;
 

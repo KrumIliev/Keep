@@ -651,7 +651,7 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="16">
+    <constants number="17">
       <constant name="RIGHT">0</constant>
       <constant name="UP">1</constant>
       <constant name="LEFT">2</constant>
@@ -668,6 +668,7 @@
       <constant name="GENERATOR_EMPTY">-1</constant>
       <constant name="GENERATOR_FLOOR">0</constant>
       <constant name="GENERATOR_WALL">1</constant>
+      <constant name="GENERATOR_PORTAL">2</constant>
     </constants>
   </ConfigConstants>
 </Config>
