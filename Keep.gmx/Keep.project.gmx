@@ -40,6 +40,7 @@
         <sprite>sprites\spr_portal_active</sprite>
       </sprites>
       <sprite>sprites\spr_sign</sprite>
+      <sprite>sprites\spr_spike_trap</sprite>
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
@@ -124,11 +125,14 @@
       <object>objects\obj_wall_finisher</object>
     </objects>
     <object>objects\obj_floor</object>
-    <object>objects\obj_portal</object>
+    <objects name="objects">
+      <object>objects\obj_portal</object>
+    </objects>
+    <object>objects\obj_spike_trap</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_generator</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_generator</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
