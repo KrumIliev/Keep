@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Init the generator
+            <string>/// Init level
+
+// Enemy spawn portals 
 num_portals = 3;
 
 // Sprite map
@@ -36,39 +38,13 @@ randomize();
 t_set = tileset[irandom_range(0, array_length_1d(tileset) - 1)];
 
 // Level map
-level[0, 0] = GENERATOR_EMPTY;
-objects = 0;
+grid_x = 0;
+grid_y = 0;
 
-for (xx = 0; xx &lt;= (room_width / 32) - 1; xx++) {
-    for (yy = 0; yy &lt;= (room_height / 32) - 1; yy++) {
-        level[xx, yy] = GENERATOR_EMPTY;
-    }
-}
+level[grid_x, grid_y] = GENERATOR_EMPTY;
+scr_random_level();
 
-instance_create(0, 0, obj_floor_generator);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_random_level();
+
 </string>
           </argument>
         </arguments>

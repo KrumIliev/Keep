@@ -45,6 +45,7 @@
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
     </sprites>
+    <sprite>sprites\spr_ground_torch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -91,6 +92,16 @@
         <script>scripts\scr_create_wall.gml</script>
       </scripts>
     </scripts>
+    <scripts name="level">
+      <script>scripts\scr_create_floor.gml</script>
+      <script>scripts\scr_create_walls.gml</script>
+      <script>scripts\scr_create_level.gml</script>
+      <scripts name="utls">
+        <script>scripts\scr_get_wall_type.gml</script>
+        <script>scripts\scr_add_walls.gml</script>
+      </scripts>
+      <script>scripts\scr_random_level.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_keep_medium</font>
@@ -126,9 +137,15 @@
     </objects>
     <object>objects\obj_floor</object>
     <objects name="objects">
-      <object>objects\obj_portal</object>
+      <objects name="ground">
+        <object>objects\obj_ground_torch</object>
+        <object>objects\obj_portal</object>
+        <object>objects\obj_spike_trap</object>
+      </objects>
     </objects>
-    <object>objects\obj_spike_trap</object>
+    <objects name="level">
+      <object>objects\obj_level</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_generator</room>
