@@ -22,3 +22,4 @@ background_index[0] = bg_ground_dirt;
 location = scr_find_free_ground();
 instance_create(location[0] * 32, location[1] * 32, obj_player);
 instance_create(0, 0, obj_enemy_spawn_timer);
+instance_create(0, 0, obj_light);

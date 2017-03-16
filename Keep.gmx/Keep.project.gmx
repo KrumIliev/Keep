@@ -39,13 +39,18 @@
         <sprite>sprites\spr_portal</sprite>
         <sprite>sprites\spr_portal_active</sprite>
       </sprites>
+      <sprites name="light">
+        <sprite>sprites\spr_ground_torch</sprite>
+        <sprite>sprites\spr_wall_torch</sprite>
+        <sprite>sprites\spr_light_glow</sprite>
+        <sprite>sprites\spr_player_glow</sprite>
+      </sprites>
       <sprite>sprites\spr_sign</sprite>
       <sprite>sprites\spr_spike_trap</sprite>
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
     </sprites>
-    <sprite>sprites\spr_ground_torch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground_dirt</background>
@@ -91,6 +96,7 @@
         <script>scripts\scr_finish_walls.gml</script>
         <script>scripts\scr_find_free_ground.gml</script>
         <script>scripts\scr_print_grid.gml</script>
+        <script>scripts\scr_chance.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -124,12 +130,16 @@
         <object>objects\obj_portal</object>
         <object>objects\obj_spike_trap</object>
       </objects>
+      <objects name="wall">
+        <object>objects\obj_wall_torch</object>
+      </objects>
     </objects>
     <objects name="level">
       <object>objects\obj_level</object>
       <object>objects\obj_enemy_spawn_timer</object>
       <object>objects\obj_wall_solid</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_light</object>
     </objects>
   </objects>
   <rooms name="rooms">
