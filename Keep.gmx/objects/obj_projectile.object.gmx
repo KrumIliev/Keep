@@ -85,7 +85,7 @@ if (other.id != creator) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="4" ename="obj_wall_solid">
       <action>
         <libid>1</libid>
         <id>603</id>

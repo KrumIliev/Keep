@@ -100,7 +100,6 @@
     <font>fonts\fnt_keep_small</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_wall</object>
     <object>objects\obj_spider</object>
     <object>objects\obj_life_form</object>
     <objects name="effects">
@@ -119,7 +118,6 @@
       <object>objects\obj_sign</object>
     </objects>
     <object>objects\obj_projectile</object>
-    <object>objects\obj_floor</object>
     <objects name="objects">
       <objects name="ground">
         <object>objects\obj_ground_torch</object>
@@ -130,6 +128,8 @@
     <objects name="level">
       <object>objects\obj_level</object>
       <object>objects\obj_enemy_spawn_timer</object>
+      <object>objects\obj_wall_solid</object>
+      <object>objects\obj_wall</object>
     </objects>
   </objects>
   <rooms name="rooms">
