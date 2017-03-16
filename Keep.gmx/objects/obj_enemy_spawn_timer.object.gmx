@@ -54,7 +54,13 @@ color = c_white;
 if (time &gt; 0) {
     time = time - delta_time / 1000000;
     visible_time = ceil(time);
+    
 } else {
+    with (obj_portal) {
+        sprite_index = spr_portal_active;
+        image_speed = .2;
+    }
+    
     instance_destroy();
 }
 
