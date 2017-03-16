@@ -16,4 +16,3 @@ for (yy = 0; yy <= (room_width / 32) - 1; yy++) {
 }
 
 show_debug_message("Total objects: " + string(argument1));
-

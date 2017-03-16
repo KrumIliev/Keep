@@ -48,7 +48,7 @@
     <sprite>sprites\spr_ground_torch</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_ground</background>
+    <background>background\bg_ground_dirt</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -79,28 +79,19 @@
         <script>scripts\scr_state_enemy_stall.gml</script>
       </scripts>
     </scripts>
-    <scripts name="generator">
-      <script>scripts\scr_add_wall.gml</script>
-      <script>scripts\scr_add_player.gml</script>
-      <script>scripts\scr_add_portals.gml</script>
-      <scripts name="utls">
-        <script>scripts\scr_get_wall_sprite.gml</script>
-        <script>scripts\scr_find_free_location.gml</script>
-        <script>scripts\scr_check_grid.gml</script>
-        <script>scripts\scr_add_to_grid.gml</script>
-        <script>scripts\scr_print_grid.gml</script>
-        <script>scripts\scr_create_wall.gml</script>
-      </scripts>
-    </scripts>
     <scripts name="level">
+      <script>scripts\scr_random_level.gml</script>
       <script>scripts\scr_create_floor.gml</script>
       <script>scripts\scr_create_walls.gml</script>
       <script>scripts\scr_create_level.gml</script>
+      <script>scripts\scr_create_portals.gml</script>
       <scripts name="utls">
         <script>scripts\scr_get_wall_type.gml</script>
         <script>scripts\scr_add_walls.gml</script>
+        <script>scripts\scr_finish_walls.gml</script>
+        <script>scripts\scr_find_free_ground.gml</script>
+        <script>scripts\scr_print_grid.gml</script>
       </scripts>
-      <script>scripts\scr_random_level.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -128,13 +119,6 @@
       <object>objects\obj_sign</object>
     </objects>
     <object>objects\obj_projectile</object>
-    <objects name="dungeon">
-      <object>objects\obj_wall_generator</object>
-      <object>objects\obj_level_generator</object>
-      <object>objects\obj_floor_generator</object>
-      <object>objects\obj_enemy_spawn_timer</object>
-      <object>objects\obj_wall_finisher</object>
-    </objects>
     <object>objects\obj_floor</object>
     <objects name="objects">
       <objects name="ground">
@@ -145,6 +129,7 @@
     </objects>
     <objects name="level">
       <object>objects\obj_level</object>
+      <object>objects\obj_enemy_spawn_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">

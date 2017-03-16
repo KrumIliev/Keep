@@ -651,7 +651,7 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="39">
+    <constants number="35">
       <constant name="RIGHT">0</constant>
       <constant name="UP">1</constant>
       <constant name="LEFT">2</constant>
@@ -665,11 +665,6 @@
       <constant name="SLASH_OFFSET_UP">-35</constant>
       <constant name="SLASH_OFFSET_DOWN">35</constant>
       <constant name="SLASH_OFFSET_RESET">0</constant>
-      <constant name="GENERATOR_EMPTY">-1</constant>
-      <constant name="GENERATOR_FLOOR">0</constant>
-      <constant name="GENERATOR_WALL">1</constant>
-      <constant name="GENERATOR_PORTAL">2</constant>
-      <constant name="LVL_EMPTY">-1</constant>
       <constant name="LVL_WALL_OUT_TOP_LEFT">0</constant>
       <constant name="LVL_WALL_OUT_TOP">1</constant>
       <constant name="LVL_WALL_OUT_TOP_RIGHT">2</constant>
@@ -684,12 +679,13 @@
       <constant name="LVL_WALL_IN_BOTTOM_RIGHT">11</constant>
       <constant name="LVL_WALL_ERROR">12</constant>
       <constant name="LVL_WALL_BODY_TOP_LEFT">13</constant>
-      <constant name="LVL_WALL_BODY_BOTTOM_LEFT">14</constant>
-      <constant name="LVL_WALL_BODY_TOP_CENTER">15</constant>
-      <constant name="LVL_WALL_BODY_BOTTOM_CENTER">16</constant>
-      <constant name="LVL_WALL_BODY_TOP_RIGHT">17</constant>
+      <constant name="LVL_WALL_BODY_BOTTOM_LEFT">16</constant>
+      <constant name="LVL_WALL_BODY_TOP_CENTER">14</constant>
+      <constant name="LVL_WALL_BODY_BOTTOM_CENTER">17</constant>
+      <constant name="LVL_WALL_BODY_TOP_RIGHT">15</constant>
       <constant name="LVL_WALL_BODY_BOTTOM_RIGHT">18</constant>
-      <constant name="LVL_GROUND">19</constant>
+      <constant name="LVL_EMPTY">19</constant>
+      <constant name="LVL_GROUND">-1</constant>
       <constant name="LVL_OBJECT">20</constant>
     </constants>
   </ConfigConstants>

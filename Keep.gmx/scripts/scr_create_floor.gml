@@ -10,13 +10,9 @@ var dir = 1;
 // Randomize the seed 
 randomize();
 
-// Grid edges
-var grid_max = obj_level.grid_size - 3;
-var grid_min = 2;
-
-// Pick random starting position
-grid_x = irandom_range(grid_min, grid_max);
-grid_y = irandom_range(grid_min, grid_max);
+// Starting position
+grid_x = 17;
+grid_y = 17;
 
 while (steps <= steps_max) {
 
@@ -41,10 +37,10 @@ while (steps <= steps_max) {
     if (dir == 4) { grid_y -= 3; }
     
     // Check grid edges 
-    if (grid_x < grid_min) { grid_x = grid_min; }
-    if (grid_x > grid_max) { grid_x = grid_max; }
-    if (grid_y < grid_min) { grid_y = grid_min; }
-    if (grid_y > grid_max) { grid_y = grid_max; }
+    if (grid_x < 2) { grid_x = 2; }
+    if (grid_x > obj_level.grid_size - 3) { grid_x = obj_level.grid_size - 3; }
+    if (grid_y < 2) { grid_y = 2; }
+    if (grid_y > obj_level.grid_size - 3) { grid_y = obj_level.grid_size - 3; }
     
     steps++;
 }

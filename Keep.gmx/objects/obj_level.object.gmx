@@ -28,7 +28,7 @@
             <string>/// Init level
 
 // Enemy spawn portals 
-num_portals = 3;
+portals = 3;
 
 // Sprite map
 tileset[0] = spr_wall_green;
@@ -40,8 +40,8 @@ t_set = tileset[irandom_range(0, array_length_1d(tileset) - 1)];
 // Level map
 grid_x = 0;
 grid_y = 0;
+level[grid_x, grid_y] = LVL_EMPTY;
 
-level[grid_x, grid_y] = GENERATOR_EMPTY;
 scr_random_level();
 
 
