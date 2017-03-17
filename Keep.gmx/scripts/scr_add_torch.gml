@@ -7,6 +7,7 @@ if ((obj_level.level[grid_x + 1, grid_y] == LVL_WALL_BODY_TOP_RIGHT
                 && scr_chance(.6)) {
     
      instance_create(grid_x * 32, grid_y * 32, obj_wall_torch);
+     obj_level.level[grid_x, grid_y] = LVL_OBJECT;
      return true;
 }
 

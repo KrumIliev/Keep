@@ -19,7 +19,6 @@ for (grid_x = 0; grid_x <= obj_level.grid_size - 1; grid_x++) {
             
             wall.sprite_index = biome.tileset;
             wall.image_index = obj_level.level[grid_x, grid_y];   
-            scr_create_wall_decorations(grid_x, grid_y);
         }
     }
 }

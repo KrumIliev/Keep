@@ -52,26 +52,10 @@
       <sprite>sprites\spr_wall_green</sprite>
       <sprite>sprites\spr_wall_stone</sprite>
       <sprites name="objects">
-        <sprites name="flags">
-          <sprite>sprites\spr_flag_red</sprite>
-          <sprite>sprites\spr_flag_purple</sprite>
-          <sprite>sprites\spr_flag_green</sprite>
-          <sprite>sprites\spr_flag_orange</sprite>
-          <sprite>sprites\spr_flag_green_2</sprite>
-          <sprite>sprites\spr_flag_orange_2</sprite>
-          <sprite>sprites\spr_flag_green_small</sprite>
-          <sprite>sprites\spr_orange_small</sprite>
-        </sprites>
         <sprites name="blood">
-          <sprite>sprites\spr_wall_blood_1</sprite>
-          <sprite>sprites\spr_wall_blood_2</sprite>
-          <sprite>sprites\spr_wall_blood_3</sprite>
-          <sprite>sprites\spr_wall_blood_4</sprite>
-          <sprite>sprites\spr_wall_blood_5</sprite>
-          <sprite>sprites\spr_wall_blood_6</sprite>
-          <sprite>sprites\spr_wall_blood_7</sprite>
-          <sprite>sprites\spr_wall_blood_8</sprite>
-          <sprite>sprites\spr_wall_blood_9</sprite>
+          <sprite>sprites\spr_blood_normal</sprite>
+          <sprite>sprites\spr_blood_long</sprite>
+          <sprite>sprites\spr_blood_large</sprite>
         </sprites>
         <sprite>sprites\spr_wall_torch</sprite>
         <sprite>sprites\spr_wall_fissure</sprite>
@@ -81,6 +65,8 @@
         <sprite>sprites\spr_wall_window</sprite>
         <sprite>sprites\spr_wall_picture_small</sprite>
         <sprite>sprites\spr_wall_picture_big</sprite>
+        <sprite>sprites\spr_wall_flag_green</sprite>
+        <sprite>sprites\spr_wall_flag_red</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -132,6 +118,7 @@
         <script>scripts\scr_print_grid.gml</script>
         <script>scripts\scr_chance.gml</script>
         <script>scripts\scr_add_torch.gml</script>
+        <script>scripts\scr_add_wall_object.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -172,6 +159,13 @@
         <object>objects\obj_wall_vine</object>
         <object>objects\obj_wall_moss</object>
         <object>objects\obj_wall_picture_small</object>
+        <object>objects\obj_wall_flag_red</object>
+        <object>objects\obj_wall_flag_green</object>
+        <object>objects\obj_blood_large</object>
+        <object>objects\obj_blood_normal</object>
+        <object>objects\obj_blood_long</object>
+        <object>objects\obj_wall_picture_big</object>
+        <object>objects\obj_wall_sign</object>
       </objects>
     </objects>
     <objects name="level">
@@ -183,6 +177,7 @@
       <objects name="biomes">
         <object>objects\obj_biome_sewer</object>
         <object>objects\obj_biome_cript</object>
+        <object>objects\obj_biome</object>
       </objects>
     </objects>
   </objects>

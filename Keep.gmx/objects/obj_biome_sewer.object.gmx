@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_biome</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,11 +26,24 @@
           <argument>
             <kind>1</kind>
             <string>/// Setup
+event_inherited();
+
+// Walls and ground
 tileset = spr_wall_green;
-wall_objects[0] = obj_wall_vine;
-wall_objects[1] = obj_wall_moss;
-wall_object_spawn_chanse = .4;
 ground = bg_sewer;
+
+// Common wall decorations
+wall_objects_common[0] = obj_wall_vine;
+wall_objects_common[1] = obj_wall_moss;
+wall_object_common_chanse = .2;
+
+// Rare wall decorations
+wall_objects_rare[0] = obj_blood_large;
+wall_objects_rare[1] = obj_blood_long;
+wall_objects_rare[2] = obj_wall_flag_green;
+wall_objects_rare[3] = obj_wall_sign;
+wall_objects_rare[4] = obj_blood_normal;
+
 
 </string>
           </argument>

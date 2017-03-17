@@ -13,6 +13,7 @@ obj_level.grid_size = array_length_1d(obj_level.level);
 scr_create_floor();
 scr_create_walls();
 scr_create_level();
+scr_create_wall_decorations();
 scr_create_portals();
 
 // Add the ground

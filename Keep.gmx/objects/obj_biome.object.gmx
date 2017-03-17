@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_biome</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,24 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Setup
-event_inherited();
-
-// Walls and ground
-tileset = spr_wall_stone;
-ground = bg_cript;
-
-// Common wall decorations
-wall_objects_common[0] = obj_wall_fissure;
-wall_objects_common[1] = obj_wall_picture_small;
-wall_objects_common[2] = obj_blood_normal;
-wall_objects_common[3] = obj_wall_flag_red;
-
-// Rare wall decorations
-wall_objects_rare[0] = obj_blood_large;
-wall_objects_rare[1] = obj_blood_long;
-wall_objects_rare[2] = obj_wall_picture_big;
-wall_objects_rare[3] = obj_wall_sign;
+            <string>/// Set global biome values 
+wall_object_common_chanse = .1;
+wall_object_rare_chanse = .04;
 </string>
           </argument>
         </arguments>
