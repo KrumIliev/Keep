@@ -16,7 +16,7 @@ scr_create_level();
 scr_create_portals();
 
 // Add the ground
-background_index[0] = bg_ground_dirt;
+background_index[0] = biome.ground;
 
 // Add the player
 location = scr_find_free_ground();

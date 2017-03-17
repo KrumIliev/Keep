@@ -30,6 +30,7 @@ tileset = spr_wall_green;
 wall_objects[0] = obj_wall_vine;
 wall_objects[1] = obj_wall_moss;
 wall_object_spawn_chanse = .4;
+ground = bg_sewer;
 
 </string>
           </argument>

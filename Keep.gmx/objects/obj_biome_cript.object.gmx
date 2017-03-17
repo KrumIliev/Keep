@@ -30,6 +30,7 @@ tileset = spr_wall_stone;
 wall_objects[0] = obj_wall_fissure;
 wall_objects[1] = obj_wall_picture_small;
 wall_object_spawn_chanse = .1;
+ground = bg_cript;
 </string>
           </argument>
         </arguments>

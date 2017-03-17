@@ -85,7 +85,8 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_ground_dirt</background>
+    <background>background\bg_cript</background>
+    <background>background\bg_sewer</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
