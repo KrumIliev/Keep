@@ -17,17 +17,9 @@ for (grid_x = 0; grid_x <= obj_level.grid_size - 1; grid_x++) {
             }
         
             
-            wall.sprite_index = obj_level.t_set;
+            wall.sprite_index = biome.tileset;
             wall.image_index = obj_level.level[grid_x, grid_y];   
-            
-            if (obj_level.level[grid_x, grid_y] == LVL_WALL_BODY_TOP_CENTER && 
-                (obj_level.level[grid_x + 1, grid_y] == LVL_WALL_BODY_TOP_RIGHT
-                || obj_level.level[grid_x - 1, grid_y] == LVL_WALL_BODY_TOP_LEFT)
-                && scr_chance(.6)) {
-                    
-                instance_create(grid_x * 32, grid_y * 32, obj_wall_torch);
-                obj_level.level[grid_x, grid_y] = LVL_OBJECT;
-            }
+            scr_create_wall_decorations(grid_x, grid_y);
         }
     }
 }

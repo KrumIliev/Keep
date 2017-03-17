@@ -31,8 +31,6 @@
     <sprites name="tiles">
       <sprite>sprites\spr_ground_dirt</sprite>
       <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_wall_green</sprite>
-      <sprite>sprites\spr_wall_stone</sprite>
     </sprites>
     <sprites name="objects">
       <sprites name="portal">
@@ -41,8 +39,7 @@
       </sprites>
       <sprites name="light">
         <sprite>sprites\spr_ground_torch</sprite>
-        <sprite>sprites\spr_wall_torch</sprite>
-        <sprite>sprites\spr_light_glow</sprite>
+        <sprite>sprites\spr_torch_glow</sprite>
         <sprite>sprites\spr_player_glow</sprite>
       </sprites>
       <sprite>sprites\spr_sign</sprite>
@@ -50,6 +47,41 @@
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
+    </sprites>
+    <sprites name="walls">
+      <sprite>sprites\spr_wall_green</sprite>
+      <sprite>sprites\spr_wall_stone</sprite>
+      <sprites name="objects">
+        <sprites name="flags">
+          <sprite>sprites\spr_flag_red</sprite>
+          <sprite>sprites\spr_flag_purple</sprite>
+          <sprite>sprites\spr_flag_green</sprite>
+          <sprite>sprites\spr_flag_orange</sprite>
+          <sprite>sprites\spr_flag_green_2</sprite>
+          <sprite>sprites\spr_flag_orange_2</sprite>
+          <sprite>sprites\spr_flag_green_small</sprite>
+          <sprite>sprites\spr_orange_small</sprite>
+        </sprites>
+        <sprites name="blood">
+          <sprite>sprites\spr_wall_blood_1</sprite>
+          <sprite>sprites\spr_wall_blood_2</sprite>
+          <sprite>sprites\spr_wall_blood_3</sprite>
+          <sprite>sprites\spr_wall_blood_4</sprite>
+          <sprite>sprites\spr_wall_blood_5</sprite>
+          <sprite>sprites\spr_wall_blood_6</sprite>
+          <sprite>sprites\spr_wall_blood_7</sprite>
+          <sprite>sprites\spr_wall_blood_8</sprite>
+          <sprite>sprites\spr_wall_blood_9</sprite>
+        </sprites>
+        <sprite>sprites\spr_wall_torch</sprite>
+        <sprite>sprites\spr_wall_fissure</sprite>
+        <sprite>sprites\spr_wall_vines</sprite>
+        <sprite>sprites\spr_wall_moss</sprite>
+        <sprite>sprites\spr_wall_sign</sprite>
+        <sprite>sprites\spr_wall_window</sprite>
+        <sprite>sprites\spr_wall_picture_small</sprite>
+        <sprite>sprites\spr_wall_picture_big</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -89,6 +121,7 @@
       <script>scripts\scr_create_floor.gml</script>
       <script>scripts\scr_create_walls.gml</script>
       <script>scripts\scr_create_level.gml</script>
+      <script>scripts\scr_create_wall_decorations.gml</script>
       <script>scripts\scr_create_portals.gml</script>
       <scripts name="utls">
         <script>scripts\scr_get_wall_type.gml</script>
@@ -97,6 +130,7 @@
         <script>scripts\scr_find_free_ground.gml</script>
         <script>scripts\scr_print_grid.gml</script>
         <script>scripts\scr_chance.gml</script>
+        <script>scripts\scr_add_torch.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -131,7 +165,12 @@
         <object>objects\obj_spike_trap</object>
       </objects>
       <objects name="wall">
+        <object>objects\obj_wall_decoration</object>
         <object>objects\obj_wall_torch</object>
+        <object>objects\obj_wall_fissure</object>
+        <object>objects\obj_wall_vine</object>
+        <object>objects\obj_wall_moss</object>
+        <object>objects\obj_wall_picture_small</object>
       </objects>
     </objects>
     <objects name="level">
@@ -140,6 +179,10 @@
       <object>objects\obj_wall_solid</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_light</object>
+      <objects name="biomes">
+        <object>objects\obj_biome_sewer</object>
+        <object>objects\obj_biome_cript</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

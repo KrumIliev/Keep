@@ -30,12 +30,9 @@
 // Enemy spawn portals 
 portals = 3;
 
-// Sprite map
-tileset[0] = spr_wall_green;
-tileset[1] = spr_wall_stone;
-// Pick random tileset
+// Pick random biome
 randomize();
-t_set = tileset[irandom_range(0, array_length_1d(tileset) - 1)];
+biome = instance_create(0, 0, choose(obj_biome_sewer, obj_biome_cript));
 
 // Level map
 grid_x = 0;

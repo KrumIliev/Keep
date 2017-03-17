@@ -33,56 +33,6 @@ surf = surface_create(room_width, room_height);
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*if (surface_exists(surf)) {
-    surface_set_target(surf);
-    
-    // Set the dark overlay
-    draw_set_colour(c_black);
-    draw_set_alpha(1);
-    draw_rectangle(0, 0, room_width, room_height, false);
-    
-    // Set circles
-    draw_set_blend_mode(bm_subtract);
-    draw_set_colour(c_white);
-    
-    // Draw the circles
-    with (obj_player) {
-        draw_circle(x, y, 96, false);
-    }
-    
-    // Reset all of the set draws
-    draw_set_blend_mode(bm_normal);
-    draw_set_alpha(1);
-    surface_reset_target();
-    
-} else {
-    surf = surface_create(room_width, room_height);
-    surface_set_target(surf);
-    draw_clear_alpha(c_black, 0);
-    surface_reset_target();
-}*/
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="7" enumb="5">
       <action>
         <libid>1</libid>
@@ -132,7 +82,7 @@ draw_clear(c_black);
 
 with (obj_wall_torch) {
     draw_set_blend_mode(bm_src_colour);
-    draw_sprite_ext(spr_light_glow, 0, x + 12, y, glow_size, glow_size, 0, c_white, 1);
+    draw_sprite_ext(spr_torch_glow, 0, x + 12, y, glow_size, glow_size, 0, c_white, 1);
     draw_set_blend_mode(bm_normal);
 } 
 
