@@ -92,6 +92,22 @@ with (obj_player) {
     draw_set_blend_mode(bm_normal);
 }   
 
+if (object_exists(obj_flame_blast)) {
+    with (obj_flame_blast) {
+        draw_set_blend_mode(bm_src_colour);
+        draw_sprite_ext(spr_torch_glow, 0, x, y, glow_size, glow_size, 0, c_white, 1);
+        draw_set_blend_mode(bm_normal);
+    }
+}
+
+if (object_exists(obj_flame_hit)) {
+    with (obj_flame_hit) {
+        draw_set_blend_mode(bm_src_colour);
+        draw_sprite_ext(spr_torch_glow, 0, x, y, glow_size, glow_size, 0, c_white, 1);
+        draw_set_blend_mode(bm_normal);
+    }
+}
+
 surface_reset_target();
 draw_surface_ext(surf, 0, 0, 1, 1, 0, c_white, .7);
 </string>
