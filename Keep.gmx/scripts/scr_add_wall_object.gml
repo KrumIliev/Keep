@@ -7,8 +7,8 @@ var objects = argument2;
 var obj = instance_create(grid_x * 32, grid_y * 32, objects[irandom(array_length_1d(objects) - 1)]);
 var x_size = obj.size_x / 32 - 1;
 
-if (x_size > 0 && (obj_level.level[grid_x + 1, grid_y] == LVL_WALL_OUT_TOP_LEFT
-    || obj_level.level[grid_x + 1, grid_y] == LVL_WALL_BODY_TOP_LEFT)) {
+if (x_size > 0 && (obj_level.level[grid_x + 1, grid_y] == LVL_WALL_OUT_RIGHT
+                || obj_level.level[grid_x + 1, grid_y] == LVL_WALL_IN_TOP_RIGHT)) {
     with (obj) {
         instance_destroy();
     }

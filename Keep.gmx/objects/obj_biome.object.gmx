@@ -28,6 +28,7 @@
             <string>/// Set global biome values 
 wall_object_common_chanse = .1;
 wall_object_rare_chanse = .04;
+ground_decorations = 10;
 </string>
           </argument>
         </arguments>

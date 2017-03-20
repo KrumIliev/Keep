@@ -32,7 +32,7 @@ portals = 3;
 
 // Pick random biome
 randomize();
-biome = instance_create(0, 0, choose(obj_biome_sewer, obj_biome_cript));
+biome = instance_create(0, 0, choose(obj_biome_sewer, obj_biome_crypt));
 
 // Level map
 grid_x = 0;

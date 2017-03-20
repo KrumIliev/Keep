@@ -32,7 +32,7 @@
       <sprite>sprites\spr_ground_dirt</sprite>
       <sprite>sprites\spr_wall</sprite>
     </sprites>
-    <sprites name="objects">
+    <sprites name="ground">
       <sprites name="portal">
         <sprite>sprites\spr_portal</sprite>
         <sprite>sprites\spr_portal_active</sprite>
@@ -42,20 +42,39 @@
         <sprite>sprites\spr_torch_glow</sprite>
         <sprite>sprites\spr_player_glow</sprite>
       </sprites>
+      <sprites name="bones">
+        <sprite>sprites\spr_ground_bones_1</sprite>
+        <sprite>sprites\spr_ground_bones_2</sprite>
+        <sprite>sprites\spr_ground_bones_3</sprite>
+        <sprite>sprites\spr_ground_bones_4</sprite>
+        <sprite>sprites\spr_ground_bones_5</sprite>
+        <sprite>sprites\spr_ground_bones_6</sprite>
+        <sprite>sprites\spr_ground_bones_7</sprite>
+        <sprite>sprites\spr_ground_bones_8</sprite>
+      </sprites>
+      <sprites name="blood">
+        <sprite>sprites\spr_ground_blood_large</sprite>
+        <sprite>sprites\spr_ground_blood_small</sprite>
+      </sprites>
       <sprite>sprites\spr_sign</sprite>
       <sprite>sprites\spr_spike_trap</sprite>
+      <sprite>sprites\spr_barrels</sprite>
+      <sprite>sprites\spr_shaft_large</sprite>
+      <sprite>sprites\spr_shaft_small</sprite>
+      <sprite>sprites\spr_hole_sewer</sprite>
+      <sprite>sprites\spr_plants_orange</sprite>
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
     </sprites>
     <sprites name="walls">
-      <sprite>sprites\spr_wall_green</sprite>
-      <sprite>sprites\spr_wall_stone</sprite>
+      <sprite>sprites\spr_wall_sewer</sprite>
+      <sprite>sprites\spr_wall_crypt</sprite>
       <sprites name="objects">
         <sprites name="blood">
-          <sprite>sprites\spr_blood_normal</sprite>
-          <sprite>sprites\spr_blood_long</sprite>
-          <sprite>sprites\spr_blood_large</sprite>
+          <sprite>sprites\spr_wall_blood_normal</sprite>
+          <sprite>sprites\spr_wall_blood_long</sprite>
+          <sprite>sprites\spr_wall_blood_large</sprite>
         </sprites>
         <sprite>sprites\spr_wall_torch</sprite>
         <sprite>sprites\spr_wall_fissure</sprite>
@@ -67,11 +86,12 @@
         <sprite>sprites\spr_wall_picture_big</sprite>
         <sprite>sprites\spr_wall_flag_green</sprite>
         <sprite>sprites\spr_wall_flag_red</sprite>
+        <sprite>sprites\spr_wall_vent_leak</sprite>
       </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_cript</background>
+    <background>background\bg_crypt</background>
     <background>background\bg_sewer</background>
   </backgrounds>
   <paths name="paths"/>
@@ -109,6 +129,7 @@
       <script>scripts\scr_create_walls.gml</script>
       <script>scripts\scr_create_level.gml</script>
       <script>scripts\scr_create_wall_decorations.gml</script>
+      <script>scripts\scr_create_ground_decorations.gml</script>
       <script>scripts\scr_create_portals.gml</script>
       <scripts name="utls">
         <script>scripts\scr_get_wall_type.gml</script>
@@ -151,6 +172,27 @@
         <object>objects\obj_ground_torch</object>
         <object>objects\obj_portal</object>
         <object>objects\obj_spike_trap</object>
+        <objects name="decorations">
+          <object>objects\obj_ground_decoration</object>
+          <object>objects\obj_ground_decoration_solid</object>
+          <objects name="bones">
+            <object>objects\obj_bones_1</object>
+            <object>objects\obj_bones_2</object>
+            <object>objects\obj_bones_3</object>
+            <object>objects\obj_bones_4</object>
+            <object>objects\obj_bones_5</object>
+            <object>objects\obj_bones_6</object>
+            <object>objects\obj_bones_7</object>
+            <object>objects\obj_bones_8</object>
+          </objects>
+          <object>objects\obj_ground_blood_large</object>
+          <object>objects\obj_ground_blood_small</object>
+          <object>objects\obj_barrels</object>
+          <object>objects\obj_shaft_large</object>
+          <object>objects\obj_hole_sewer</object>
+          <object>objects\obj_shaft_small</object>
+          <object>objects\obj_plant</object>
+        </objects>
       </objects>
       <objects name="wall">
         <object>objects\obj_wall_decoration</object>
@@ -166,6 +208,7 @@
         <object>objects\obj_blood_long</object>
         <object>objects\obj_wall_picture_big</object>
         <object>objects\obj_wall_sign</object>
+        <object>objects\obj_wall_vent</object>
       </objects>
     </objects>
     <objects name="level">
@@ -176,7 +219,7 @@
       <object>objects\obj_light</object>
       <objects name="biomes">
         <object>objects\obj_biome_sewer</object>
-        <object>objects\obj_biome_cript</object>
+        <object>objects\obj_biome_crypt</object>
         <object>objects\obj_biome</object>
       </objects>
     </objects>

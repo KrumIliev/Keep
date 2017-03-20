@@ -15,6 +15,7 @@ scr_create_walls();
 scr_create_level();
 scr_create_wall_decorations();
 scr_create_portals();
+scr_create_ground_decorations();
 
 // Add the ground
 background_index[0] = biome.ground;

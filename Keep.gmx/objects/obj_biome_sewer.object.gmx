@@ -29,20 +29,52 @@
 event_inherited();
 
 // Walls and ground
-tileset = spr_wall_green;
+tileset = spr_wall_sewer;
 ground = bg_sewer;
 
 // Common wall decorations
 wall_objects_common[0] = obj_wall_vine;
 wall_objects_common[1] = obj_wall_moss;
-wall_object_common_chanse = .2;
+wall_objects_common[2] = obj_blood_normal;
+wall_objects_common[3] = obj_wall_vent;
+wall_object_common_chanse = .3;
 
 // Rare wall decorations
 wall_objects_rare[0] = obj_blood_large;
 wall_objects_rare[1] = obj_blood_long;
 wall_objects_rare[2] = obj_wall_flag_green;
 wall_objects_rare[3] = obj_wall_sign;
-wall_objects_rare[4] = obj_blood_normal;
+
+// Ground decoration
+ground_objects[0] = obj_bones_1;
+ground_objects[1] = obj_bones_2;
+ground_objects[2] = obj_bones_3;
+ground_objects[3] = obj_bones_4;
+ground_objects[4] = obj_bones_5;
+ground_objects[5] = obj_bones_6;
+ground_objects[6] = obj_bones_7;
+ground_objects[7] = obj_bones_8;
+ground_objects[8] = obj_ground_blood_large;
+ground_objects[9] = obj_ground_blood_small;
+ground_objects[10] = obj_shaft_large;
+ground_objects[11] = obj_shaft_small;
+ground_objects[12] = obj_hole_sewer;
+ground_objects[13] = obj_ground_blood_large;
+ground_objects[14] = obj_ground_blood_small;
+ground_objects[15] = obj_ground_blood_large;
+ground_objects[16] = obj_ground_blood_small;
+ground_objects[17] = obj_ground_blood_large;
+ground_objects[18] = obj_ground_blood_small;
+ground_objects[19] = obj_ground_blood_large;
+ground_objects[20] = obj_ground_blood_small;
+ground_objects[21] = obj_ground_blood_large;
+ground_objects[22] = obj_ground_blood_small;
+ground_objects[23] = obj_ground_blood_large;
+ground_objects[24] = obj_ground_blood_small;
+ground_objects[25] = obj_ground_blood_large;
+ground_objects[26] = obj_ground_blood_small;
+ground_objects[27] = obj_ground_blood_large;
+ground_objects[28] = obj_ground_blood_small;
 
 
 </string>
