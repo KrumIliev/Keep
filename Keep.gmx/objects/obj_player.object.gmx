@@ -171,6 +171,45 @@ if (state == scr_state_attack) {
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Add shadow
+switch(var_face) {
+     case LEFT:
+            draw_sprite(spr_player_shadow_left, 0, x, y);
+            break;
+            
+        case RIGHT:
+            draw_sprite(spr_player_shadow_right, 0, x, y);
+            break;
+            
+        case UP:
+        case DOWN:
+            draw_sprite(spr_player_shadow, 0, x, y);
+            break;
+}
+
+draw_self();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

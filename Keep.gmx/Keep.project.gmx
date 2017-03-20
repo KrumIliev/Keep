@@ -15,6 +15,11 @@
       <sprite>sprites\spr_player_attack_left</sprite>
       <sprite>sprites\spr_player_attack_right</sprite>
       <sprite>sprites\spr_player_attack_up</sprite>
+      <sprites name="shadow">
+        <sprite>sprites\spr_player_shadow</sprite>
+        <sprite>sprites\spr_player_shadow_left</sprite>
+        <sprite>sprites\spr_player_shadow_right</sprite>
+      </sprites>
     </sprites>
     <sprites name="enemies">
       <sprites name="spider">
