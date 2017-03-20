@@ -61,8 +61,12 @@
         <sprite>sprites\spr_ground_blood_large</sprite>
         <sprite>sprites\spr_ground_blood_small</sprite>
       </sprites>
+      <sprites name="traps">
+        <sprite>sprites\spr_spike_trap</sprite>
+        <sprite>sprites\spr_trap_fire_face</sprite>
+        <sprite>sprites\spr_trap_fire_back</sprite>
+      </sprites>
       <sprite>sprites\spr_sign</sprite>
-      <sprite>sprites\spr_spike_trap</sprite>
       <sprite>sprites\spr_barrels</sprite>
       <sprite>sprites\spr_shaft_large</sprite>
       <sprite>sprites\spr_shaft_small</sprite>
@@ -71,6 +75,8 @@
     </sprites>
     <sprites name="effects">
       <sprite>sprites\spr_slash</sprite>
+      <sprite>sprites\spr_flame_blast</sprite>
+      <sprite>sprites\spr_flame_hit</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -161,6 +167,7 @@
       <object>objects\obj_dash_effect</object>
       <object>objects\obj_damage</object>
       <object>objects\obj_attack_slash</object>
+      <object>objects\obj_flame_blast</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
@@ -198,6 +205,7 @@
           <object>objects\obj_shaft_small</object>
           <object>objects\obj_plant</object>
         </objects>
+        <object>objects\obj_flame_blast_trap</object>
       </objects>
       <objects name="wall">
         <object>objects\obj_wall_decoration</object>
@@ -230,8 +238,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_generator</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_generator</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
