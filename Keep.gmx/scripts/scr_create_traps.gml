@@ -11,6 +11,17 @@ if (obj_level.level[grid_x, grid_y + 1] == LVL_GROUND && scr_chance(.4)) {
     obj_level.level[grid_x, grid_y + 1] = LVL_OBJECT;
 }
 
+// Add eye trap
+location = scr_find_free_ground();
+grid_x = location[0];
+grid_y = location[1];
+
+if (obj_level.level[grid_x, grid_y + 1] == LVL_GROUND && scr_chance(.4)) {
+    instance_create(location[0] * 32, location[1] * 32, obj_eye_trap);
+    obj_level.level[grid_x, grid_y] = LVL_OBJECT;
+    obj_level.level[grid_x, grid_y + 1] = LVL_OBJECT;
+}
+
 // Add spike traps
 if (scr_chance(.6)) {
     location = scr_find_free_ground();

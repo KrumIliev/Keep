@@ -66,6 +66,8 @@
         <sprite>sprites\spr_spike_trap</sprite>
         <sprite>sprites\spr_trap_fire_blast</sprite>
         <sprite>sprites\spr_flame_trap</sprite>
+        <sprite>sprites\spr_ball_trap</sprite>
+        <sprite>sprites\spr_eye_trap</sprite>
       </sprites>
       <sprite>sprites\spr_sign</sprite>
       <sprite>sprites\spr_barrels</sprite>
@@ -79,6 +81,12 @@
       <sprite>sprites\spr_flame_blast</sprite>
       <sprite>sprites\spr_flame_hit</sprite>
       <sprite>sprites\spr_flame</sprite>
+      <sprites name="eyes">
+        <sprite>sprites\spr_eye_gray</sprite>
+        <sprite>sprites\spr_eye_red</sprite>
+        <sprite>sprites\spr_eye_blue</sprite>
+        <sprite>sprites\spr_eye_brown</sprite>
+      </sprites>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -111,7 +119,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_face.gml</script>
-    <script>scripts\scr_fire_fire_blast_projectile.gml</script>
     <scripts name="player">
       <scripts name="states">
         <script>scripts\scr_state_move.gml</script>
@@ -162,6 +169,10 @@
         </scripts>
       </scripts>
     </scripts>
+    <scripts name="traps">
+      <script>scripts\scr_fire_fire_blast_projectile.gml</script>
+      <script>scripts\scr_fire_small_eye_projectile.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_keep_medium</font>
@@ -179,6 +190,8 @@
       <object>objects\obj_flame_blast</object>
       <object>objects\obj_flame_hit</object>
       <object>objects\obj_flame</object>
+      <object>objects\obj_eye_projectile_large</object>
+      <object>objects\obj_eye_projectile_small</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
@@ -218,6 +231,7 @@
         <object>objects\obj_spike_trap</object>
         <object>objects\obj_flame_blast_trap</object>
         <object>objects\obj_flame_trap</object>
+        <object>objects\obj_eye_trap</object>
       </objects>
       <objects name="wall">
         <object>objects\obj_wall_decoration</object>
