@@ -98,6 +98,16 @@ if (point_in_circle(dest_x, dest_y, x, y, 10)) {
 with (creator) {
     is_firing = false;
 }
+
+    scr_fire_small_eye_projectile(x, y, 0);
+    scr_fire_small_eye_projectile(x, y, 45);
+    scr_fire_small_eye_projectile(x, y, 90);
+    scr_fire_small_eye_projectile(x, y, 135);
+    scr_fire_small_eye_projectile(x, y, 180);
+    scr_fire_small_eye_projectile(x, y, 225);
+    scr_fire_small_eye_projectile(x, y, 270);
+    scr_fire_small_eye_projectile(x, y, 315);
+
 instance_destroy();
 </string>
           </argument>

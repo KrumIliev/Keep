@@ -29,7 +29,7 @@
 depth = (-y) - 20;
 rad = 190;
 is_firing = false;
-is_active = true; 
+is_active = false; 
 </string>
           </argument>
         </arguments>

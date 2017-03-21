@@ -34,7 +34,7 @@ if (scr_chance(.6)) {
 
 // Add flame traps 
 if (scr_chance(.6)) {
-    var needed = irandom(5);
+    var needed = irandom(3);
     var added = 0;
     
     while (added <= needed) {
