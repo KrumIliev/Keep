@@ -188,9 +188,6 @@
     <object>objects\obj_projectile</object>
     <objects name="objects">
       <objects name="ground">
-        <object>objects\obj_ground_torch</object>
-        <object>objects\obj_portal</object>
-        <object>objects\obj_spike_trap</object>
         <objects name="decorations">
           <object>objects\obj_ground_decoration</object>
           <object>objects\obj_ground_decoration_solid</object>
@@ -212,6 +209,9 @@
           <object>objects\obj_shaft_small</object>
           <object>objects\obj_plant</object>
         </objects>
+        <object>objects\obj_ground_torch</object>
+        <object>objects\obj_portal</object>
+        <object>objects\obj_spike_trap</object>
         <object>objects\obj_flame_blast_trap</object>
       </objects>
       <objects name="wall">
@@ -232,16 +232,16 @@
       </objects>
     </objects>
     <objects name="level">
-      <object>objects\obj_level</object>
-      <object>objects\obj_enemy_spawn_timer</object>
-      <object>objects\obj_wall_solid</object>
-      <object>objects\obj_wall</object>
-      <object>objects\obj_light</object>
       <objects name="biomes">
         <object>objects\obj_biome_sewer</object>
         <object>objects\obj_biome_crypt</object>
         <object>objects\obj_biome</object>
       </objects>
+      <object>objects\obj_level</object>
+      <object>objects\obj_enemy_spawn_timer</object>
+      <object>objects\obj_wall_solid</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_light</object>
       <object>objects\obj_wall_bottom</object>
       <object>objects\obj_void</object>
     </objects>
