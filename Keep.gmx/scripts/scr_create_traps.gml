@@ -20,3 +20,19 @@ if (scr_chance(.6)) {
 
     scr_add_spike_trap_group(grid_x, grid_y);
 }
+
+// Add flame traps 
+if (scr_chance(.6)) {
+    var needed = irandom(5);
+    var added = 0;
+    
+    while (added <= needed) {
+        location = scr_find_free_ground();
+        grid_x = location[0];
+        grid_y = location[1];
+        
+        instance_create(grid_x * 32, grid_y * 32, obj_flame_trap);
+        obj_level.level[grid_x, grid_y] = LVL_OBJECT;
+        added++;
+    }
+}

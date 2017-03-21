@@ -46,6 +46,7 @@
         <sprite>sprites\spr_ground_torch</sprite>
         <sprite>sprites\spr_torch_glow</sprite>
         <sprite>sprites\spr_player_glow</sprite>
+        <sprite>sprites\spr_flame_glow</sprite>
       </sprites>
       <sprites name="bones">
         <sprite>sprites\spr_ground_bones_1</sprite>
@@ -64,6 +65,7 @@
       <sprites name="traps">
         <sprite>sprites\spr_spike_trap</sprite>
         <sprite>sprites\spr_trap_fire_blast</sprite>
+        <sprite>sprites\spr_flame_trap</sprite>
       </sprites>
       <sprite>sprites\spr_sign</sprite>
       <sprite>sprites\spr_barrels</sprite>
@@ -76,6 +78,7 @@
       <sprite>sprites\spr_slash</sprite>
       <sprite>sprites\spr_flame_blast</sprite>
       <sprite>sprites\spr_flame_hit</sprite>
+      <sprite>sprites\spr_flame</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -175,6 +178,7 @@
       <object>objects\obj_attack_slash</object>
       <object>objects\obj_flame_blast</object>
       <object>objects\obj_flame_hit</object>
+      <object>objects\obj_flame</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
@@ -213,6 +217,7 @@
         <object>objects\obj_portal</object>
         <object>objects\obj_spike_trap</object>
         <object>objects\obj_flame_blast_trap</object>
+        <object>objects\obj_flame_trap</object>
       </objects>
       <objects name="wall">
         <object>objects\obj_wall_decoration</object>
