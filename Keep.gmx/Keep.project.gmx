@@ -138,6 +138,7 @@
       </sprites>
       <sprite>sprites\spr_void</sprite>
     </sprites>
+    <sprite>sprites\spr_fly</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_crypt</background>
@@ -181,6 +182,7 @@
       <script>scripts\scr_create_ground_decorations.gml</script>
       <script>scripts\scr_create_portals.gml</script>
       <script>scripts\scr_create_traps.gml</script>
+      <script>scripts\scr_create_flies.gml</script>
       <scripts name="utls">
         <script>scripts\scr_get_wall_type.gml</script>
         <script>scripts\scr_add_walls.gml</script>
@@ -295,10 +297,11 @@
       <object>objects\obj_golem</object>
       <object>objects\obj_enemy</object>
     </objects>
+    <object>objects\obj_fly</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_generator</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
