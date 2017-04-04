@@ -55,7 +55,6 @@
           <sprite>sprites\spr_golem_attack_left</sprite>
           <sprite>sprites\spr_golem_attack_right</sprite>
         </sprites>
-        <sprite>sprites\spr_golem_attack_effect</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
@@ -108,6 +107,7 @@
       <sprite>sprites\spr_flame_blast</sprite>
       <sprite>sprites\spr_flame_hit</sprite>
       <sprite>sprites\spr_flame</sprite>
+      <sprite>sprites\spr_slam</sprite>
       <sprites name="eyes">
         <sprite>sprites\spr_eye_gray</sprite>
         <sprite>sprites\spr_eye_red</sprite>
@@ -220,6 +220,7 @@
       <object>objects\obj_flame</object>
       <object>objects\obj_eye_projectile_large</object>
       <object>objects\obj_eye_projectile_small</object>
+      <object>objects\obj_golem_slam</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
