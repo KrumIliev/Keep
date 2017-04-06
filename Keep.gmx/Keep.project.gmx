@@ -171,6 +171,7 @@
         <script>scripts\scr_state_enemy_wander.gml</script>
         <script>scripts\scr_state_enemy_idle.gml</script>
         <script>scripts\scr_state_enemy_stall.gml</script>
+        <script>scripts\scr_state_enemy_attack.gml</script>
       </scripts>
     </scripts>
     <scripts name="level">
@@ -287,11 +288,15 @@
       </objects>
       <object>objects\obj_level</object>
       <object>objects\obj_enemy_spawn_timer</object>
-      <object>objects\obj_wall_solid</object>
-      <object>objects\obj_wall</object>
       <object>objects\obj_light</object>
-      <object>objects\obj_wall_bottom</object>
       <object>objects\obj_void</object>
+      <object>objects\obj_solid</object>
+      <objects name="walls">
+        <object>objects\obj_wall_bottom</object>
+        <object>objects\obj_wall_solid</object>
+        <object>objects\obj_wall_top</object>
+        <object>objects\obj_wall</object>
+      </objects>
     </objects>
     <objects name="enemies">
       <object>objects\obj_spider</object>

@@ -49,23 +49,3 @@ if (key_slash && !var_is_attacking) {
     instance_create(x, y, obj_attack_slash);
     var_is_attacking = true;
 }
-
-if (key_wave) {
-    switch (var_face) {
-        case RIGHT:
-            instance_create(x + 32, y, obj_golem_slam);
-            break;     
-            
-        case LEFT: 
-            instance_create(x - 32, y, obj_golem_slam);
-            break; 
-            
-        case UP: 
-            instance_create(x, y - 32, obj_golem_slam);
-            break;     
-           
-        case DOWN: 
-            instance_create(x, y + 16, obj_golem_slam);
-            break;     
-    }
-}

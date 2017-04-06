@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// Setup
 depth = -y;
-creator = noone;
 
 </string>
           </argument>
@@ -52,6 +51,8 @@ creator = noone;
           <argument>
             <kind>1</kind>
             <string>/// Damage the player
+obj_player_stats.player_hp--;
+
 </string>
           </argument>
         </arguments>
@@ -84,18 +85,18 @@ creator = noone;
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>-1</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0</PhysicsObjectRestitution>
+  <PhysicsObjectDensity>0</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0</PhysicsObjectFriction>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>12,24</point>
-    <point>52,24</point>
-    <point>52,56</point>
-    <point>12,56</point>
+    <point>4,20</point>
+    <point>60,20</point>
+    <point>60,60</point>
+    <point>4,60</point>
   </PhysicsShapePoints>
 </object>

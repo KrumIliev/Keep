@@ -35,10 +35,10 @@ sprite[LEFT, MOVE] = spr_golem_move_left;
 sprite[UP, MOVE] = spr_golem_move_up;
 sprite[DOWN, MOVE] = spr_golem_move_down;
 
-sprite[RIGHT, ATTACK] = spr_golem_move_right;
-sprite[LEFT, ATTACK] = spr_golem_move_right;
-sprite[UP, ATTACK] = spr_golem_move_right;
-sprite[DOWN, ATTACK] = spr_golem_move_right;
+sprite[RIGHT, ATTACK] = spr_golem_attack_right;
+sprite[LEFT, ATTACK] = spr_golem_attack_left;
+sprite[UP, ATTACK] = spr_golem_attack_up;
+sprite[DOWN, ATTACK] = spr_golem_attack_down;
 
 sprite[RIGHT, IDLE] = spr_golem_idle_right;
 sprite[LEFT, IDLE] = spr_golem_idle_left;

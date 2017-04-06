@@ -10,7 +10,7 @@ for (grid_x = 0; grid_x <= obj_level.grid_size - 1; grid_x++) {
                 || obj_level.level[grid_x, grid_y] == LVL_WALL_IN_TOP_LEFT
                 || obj_level.level[grid_x, grid_y] == LVL_WALL_IN_TOP_RIGHT) {
                 
-                wall = instance_create(grid_x * 32, grid_y * 32, obj_wall);
+                wall = instance_create(grid_x * 32, grid_y * 32, obj_wall_top);
             
             } else if (obj_level.level[grid_x, grid_y] == LVL_WALL_BODY_BOTTOM_LEFT
                     || obj_level.level[grid_x, grid_y] == LVL_WALL_BODY_BOTTOM_CENTER
