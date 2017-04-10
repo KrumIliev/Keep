@@ -81,6 +81,12 @@ if (time &gt; 0) {
         }
     }
     
+    if (object_exists(obj_spike_trap)) {
+        with (obj_spike_trap) {
+            is_active = true;
+        }
+    }
+    
     instance_destroy();
 }
 

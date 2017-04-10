@@ -77,7 +77,7 @@ glow_size = clamp(glow_size, 0.9, 1.1);
           <argument>
             <kind>1</kind>
             <string>/// Damage player
-obj_player_stats.player_hp--;
+scr_damage_player(1);
 </string>
           </argument>
         </arguments>

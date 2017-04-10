@@ -151,7 +151,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>///Damage the player
-obj_player_stats.player_hp--;
+scr_damage_player(1);
 instance_destroy();
 </string>
           </argument>
