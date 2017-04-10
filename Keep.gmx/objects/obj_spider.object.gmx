@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>obj_enemy_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>/// Init the spider
 event_inherited();
+
+attack_range = 64;
+attack_script = scr_enemy_golem_attack;
 
 // Create the sprite array
 sprite[RIGHT, MOVE] = spr_spider_move_right;

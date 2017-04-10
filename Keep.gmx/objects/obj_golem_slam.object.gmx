@@ -94,9 +94,9 @@ obj_player_stats.player_hp--;
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>4,20</point>
-    <point>60,20</point>
-    <point>60,60</point>
-    <point>4,60</point>
+    <point>10,38</point>
+    <point>88,38</point>
+    <point>88,86</point>
+    <point>10,86</point>
   </PhysicsShapePoints>
 </object>

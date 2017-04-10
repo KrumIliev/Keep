@@ -56,6 +56,7 @@
           <sprite>sprites\spr_golem_attack_right</sprite>
         </sprites>
       </sprites>
+      <sprite>sprites\spr_path_finder</sprite>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_dialog_window</sprite>
@@ -139,6 +140,7 @@
       <sprite>sprites\spr_void</sprite>
     </sprites>
     <sprite>sprites\spr_fly</sprite>
+    <sprite>sprites\spr_player_arrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_crypt</background>
@@ -166,12 +168,14 @@
         <script>scripts\scr_enemy_check_for_player.gml</script>
         <script>scripts\scr_enemy_move.gml</script>
       </scripts>
+      <scripts name="attacks">
+        <script>scripts\scr_enemy_golem_attack.gml</script>
+      </scripts>
       <scripts name="states">
-        <script>scripts\scr_state_emeny_chase.gml</script>
-        <script>scripts\scr_state_enemy_wander.gml</script>
-        <script>scripts\scr_state_enemy_idle.gml</script>
-        <script>scripts\scr_state_enemy_stall.gml</script>
-        <script>scripts\scr_state_enemy_attack.gml</script>
+        <script>scripts\scr_enemy_state_idle.gml</script>
+        <script>scripts\scr_enemy_state_check.gml</script>
+        <script>scripts\scr_enemy_state_attack.gml</script>
+        <script>scripts\scr_enemy_state_move.gml</script>
       </scripts>
     </scripts>
     <scripts name="level">
@@ -301,7 +305,8 @@
     <objects name="enemies">
       <object>objects\obj_spider</object>
       <object>objects\obj_golem</object>
-      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_parent</object>
+      <object>objects\obj_enemy_pathfinder</object>
     </objects>
     <object>objects\obj_fly</object>
   </objects>

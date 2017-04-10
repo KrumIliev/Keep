@@ -204,6 +204,10 @@ switch(var_face) {
             break;
 }
 
+//Add pointer to attack direction
+var angle = point_direction(x, y, mouse_x, mouse_y);
+draw_sprite_ext(spr_player_arrow, 0, x, y, 1, 1, angle, c_white, .6);
+
 draw_self();
 </string>
           </argument>

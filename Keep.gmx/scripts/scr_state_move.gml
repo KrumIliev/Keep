@@ -28,7 +28,7 @@ if (var_xaxis == 0 && var_yaxis == 0) {
     var_length = 0;
 } else {
     var_length = var_speed;
-    scr_get_face(var_direction); // Get the direction we are facing only if moving
+    var_face = scr_get_face(var_direction); // Get the direction we are facing only if moving
 }
 
 // Get horisontal and vertical speed

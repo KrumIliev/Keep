@@ -162,12 +162,16 @@ instance_destroy();
             <string>/// Start moving
 image_speed = 0;
 image_index = 12;
-dest_x = obj_player.x;
-dest_y = obj_player.y;
-var dir = point_direction(x, y, dest_x, dest_y);
-var xforce = lengthdir_x(15, dir);
-var yforce = lengthdir_y(15, dir);
-physics_apply_impulse(x, y, xforce, yforce);
+
+if (instance_exists(obj_player)){
+    dest_x = obj_player.x;
+    dest_y = obj_player.y;
+    var dir = point_direction(x, y, dest_x, dest_y);
+    var xforce = lengthdir_x(15, dir);
+    var yforce = lengthdir_y(15, dir);
+    physics_apply_impulse(x, y, xforce, yforce);
+}
+
 </string>
           </argument>
         </arguments>
