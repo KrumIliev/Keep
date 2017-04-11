@@ -93,7 +93,7 @@ if (instance_exists(obj_player)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_life_form">
+    <event eventtype="4" ename="obj_enemy_parent">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -111,18 +111,7 @@ if (instance_exists(obj_player)) {
           <argument>
             <kind>1</kind>
             <string>/// Damage
-if (other.id != obj_player.id) {
-    other.var_health -= obj_player_stats.player_slash_dps; 
-
-    if (instance_exists(obj_player)) {
-        var dir = point_direction(obj_player.x, obj_player.y, other.x, other.y);
-        var xforce = lengthdir_x(knockback, dir); 
-        var yforce = lengthdir_y(knockback, dir);
-        with(other) {
-            physics_apply_impulse(x, y, xforce, yforce);
-        }
-    }
-}
+scr_enemy_damage(other, obj_player_stats.player_slash_dps, knockback);
 </string>
           </argument>
         </arguments>
