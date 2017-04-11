@@ -115,6 +115,9 @@
         <sprite>sprites\spr_eye_blue</sprite>
         <sprite>sprites\spr_eye_brown</sprite>
       </sprites>
+      <sprite>sprites\spr_blood_explosion</sprite>
+      <sprite>sprites\spr_death_large</sprite>
+      <sprite>sprites\spr_death_small</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -229,6 +232,9 @@
       <object>objects\obj_eye_projectile_large</object>
       <object>objects\obj_eye_projectile_small</object>
       <object>objects\obj_golem_slam</object>
+      <object>objects\obj_blood_explosion</object>
+      <object>objects\obj_death_large</object>
+      <object>objects\obj_death_small</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>

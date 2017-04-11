@@ -30,10 +30,13 @@ image_speed = .2;
 
 state = scr_enemy_state_check;
 path = instance_create(x, y, obj_enemy_pathfinder);
+path.creator = id;
 
 attack_range = 64;
 attack_script = scr_enemy_golem_attack;
 can_attack = true;
+die_animation = obj_blood_explosion;
+die_blood = obj_death_large;
 
 var_face = RIGHT;
 var_action = IDLE;
@@ -63,6 +66,9 @@ var_action = IDLE;
 with(path) {
     instance_destroy();    
 }
+
+instance_create(x, y, die_blood);
+instance_create(x, y, die_animation);
 </string>
           </argument>
         </arguments>
