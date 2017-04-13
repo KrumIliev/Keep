@@ -142,9 +142,21 @@
       </sprites>
       <sprite>sprites\spr_void</sprite>
     </sprites>
-    <sprite>sprites\spr_fly</sprite>
     <sprite>sprites\spr_player_arrow</sprite>
     <sprite>sprites\spr_game_over</sprite>
+    <sprites name="animals">
+      <sprite>sprites\spr_fly</sprite>
+      <sprites name="mouse">
+        <sprite>sprites\spr_mouse_down</sprite>
+        <sprite>sprites\spr_mouse_right</sprite>
+        <sprite>sprites\spr_mouse_up</sprite>
+      </sprites>
+      <sprites name="lizard">
+        <sprite>sprites\spr_lizard_down</sprite>
+        <sprite>sprites\spr_lizard_right</sprite>
+        <sprite>sprites\spr_lizard_up</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_crypt</background>
@@ -193,7 +205,7 @@
       <script>scripts\scr_create_ground_decorations.gml</script>
       <script>scripts\scr_create_portals.gml</script>
       <script>scripts\scr_create_traps.gml</script>
-      <script>scripts\scr_create_flies.gml</script>
+      <script>scripts\scr_create_animals.gml</script>
       <scripts name="utls">
         <script>scripts\scr_get_wall_type.gml</script>
         <script>scripts\scr_add_walls.gml</script>
@@ -317,7 +329,12 @@
       <object>objects\obj_enemy_parent</object>
       <object>objects\obj_enemy_pathfinder</object>
     </objects>
-    <object>objects\obj_fly</object>
+    <objects name="animals">
+      <object>objects\obj_fly</object>
+      <object>objects\obj_mouse</object>
+      <object>objects\obj_lizard</object>
+      <object>objects\obj_animal</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_generator</room>

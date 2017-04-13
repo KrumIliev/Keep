@@ -17,7 +17,7 @@ scr_create_wall_decorations();
 scr_create_portals();
 scr_create_ground_decorations();
 scr_create_traps();
-scr_create_flies();
+scr_create_animals();
 
 // Add the ground
 background_index[0] = biome.ground;
