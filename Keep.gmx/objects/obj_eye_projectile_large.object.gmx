@@ -31,6 +31,7 @@ image_speed =.1;
 dest_x = 0;
 dest_y = 0;
 creator = noone;
+draw_shadow = false;
 
 </string>
           </argument>
@@ -162,6 +163,7 @@ instance_destroy();
             <string>/// Start moving
 image_speed = 0;
 image_index = 12;
+draw_shadow = true;
 
 if (instance_exists(obj_player)){
     dest_x = obj_player.x;
@@ -172,6 +174,34 @@ if (instance_exists(obj_player)){
     physics_apply_impulse(x, y, xforce, yforce);
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (draw_shadow) { 
+    scr_draw_shadow();
+    
+} else {
+    draw_self();
+}
 </string>
           </argument>
         </arguments>

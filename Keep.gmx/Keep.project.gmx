@@ -225,6 +225,7 @@
       <script>scripts\scr_fire_fire_blast_projectile.gml</script>
       <script>scripts\scr_fire_small_eye_projectile.gml</script>
     </scripts>
+    <script>scripts\scr_draw_shadow.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_keep_medium</font>

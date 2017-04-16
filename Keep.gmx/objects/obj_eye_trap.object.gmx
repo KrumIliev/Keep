@@ -53,7 +53,11 @@ is_active = false;
           <argument>
             <kind>1</kind>
             <string>/// Check for player
-if (collision_circle(x + 16, y + 32, rad, obj_player, false, true) &amp;&amp; !is_firing &amp;&amp; is_active) {
+if (instance_exists(obj_player) 
+    &amp;&amp; collision_circle(x + 16, y + 32, rad, obj_player, false, true) 
+    &amp;&amp; !collision_line(x + 16, y + 32, obj_player.x, obj_player.y, obj_wall, false, true)
+    &amp;&amp; !is_firing &amp;&amp; is_active) {
+    
     is_firing = true;
     var proj = instance_create(x + 14, y + 5, obj_eye_projectile_large);
     proj.creator = id;
