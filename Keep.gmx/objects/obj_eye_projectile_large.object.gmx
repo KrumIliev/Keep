@@ -138,6 +138,7 @@ with (creator) {
     is_firing = false;
 }
 instance_destroy();
+instance_create(x, y, obj_large_hit);
 </string>
           </argument>
         </arguments>

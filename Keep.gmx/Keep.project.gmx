@@ -118,6 +118,8 @@
       <sprite>sprites\spr_blood_explosion</sprite>
       <sprite>sprites\spr_death_large</sprite>
       <sprite>sprites\spr_death_small</sprite>
+      <sprite>sprites\spr_small_hit</sprite>
+      <sprite>sprites\spr_large_hit</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -241,6 +243,8 @@
       <object>objects\obj_attack_slash</object>
       <object>objects\obj_flame_blast</object>
       <object>objects\obj_flame_hit</object>
+      <object>objects\obj_small_hit</object>
+      <object>objects\obj_large_hit</object>
       <object>objects\obj_flame</object>
       <object>objects\obj_eye_projectile_large</object>
       <object>objects\obj_eye_projectile_small</object>
