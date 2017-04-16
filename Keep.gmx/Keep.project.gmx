@@ -232,6 +232,7 @@
     <font>fonts\fnt_keep_small</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_projectile</object>
     <object>objects\obj_life_form</object>
     <objects name="effects">
       <object>objects\obj_camera</object>
@@ -259,7 +260,6 @@
       <object>objects\obj_dialog</object>
       <object>objects\obj_sign</object>
     </objects>
-    <object>objects\obj_projectile</object>
     <objects name="objects">
       <objects name="ground">
         <objects name="decorations">
