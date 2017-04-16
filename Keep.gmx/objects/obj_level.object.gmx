@@ -43,6 +43,7 @@ level[grid_x, grid_y] = LVL_EMPTY;
 scr_random_level();
 
 global.AI_Grid = mp_grid_create(0, 0, room_width / 32, room_height / 32, 32, 32);
+mp_grid_add_instances(global.AI_Grid, obj_solid, true);
 
 
 

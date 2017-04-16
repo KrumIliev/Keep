@@ -183,9 +183,6 @@
     </scripts>
     <scripts name="enemies">
       <scripts name="utils">
-        <script>scripts\scr_enemy_next_state.gml</script>
-        <script>scripts\scr_enemy_check_for_player.gml</script>
-        <script>scripts\scr_enemy_move.gml</script>
         <script>scripts\scr_enemy_damage.gml</script>
       </scripts>
       <scripts name="attacks">
