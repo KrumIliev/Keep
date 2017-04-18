@@ -250,6 +250,7 @@
       <object>objects\obj_blood_explosion</object>
       <object>objects\obj_death_large</object>
       <object>objects\obj_death_small</object>
+      <object>objects\obj_projectile_curve</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>

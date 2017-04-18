@@ -247,6 +247,41 @@ glow_size = clamp(glow_size, 0.9, 1.1);
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_player</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>proj = instance_create(x, y, obj_projectile_curve);
+proj.end_x = mouse_x;
+proj.end_y = mouse_y;
+proj.dist = point_distance(x, y, mouse_x, mouse_y);
+
+// Start moving
+with (proj) {
+    dir = point_direction(x, y, mouse_x, mouse_y);
+    var xforce = lengthdir_x(50, dir);
+    var yforce = lengthdir_y(50, dir);
+    physics_apply_impulse(x, y, xforce, yforce);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>

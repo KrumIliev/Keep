@@ -51,11 +51,11 @@ current_enemies = 0;
           <argument>
             <kind>1</kind>
             <string>///Spawn enemy
-if (current_enemies &lt; max_enemies) {
+/*if (current_enemies &lt; max_enemies) {
     instance_create(x, y, obj_golem);
     current_enemies++;
     alarm[0] = room_speed * irandom_range(3, 5);
-}
+}*/
 </string>
           </argument>
         </arguments>
