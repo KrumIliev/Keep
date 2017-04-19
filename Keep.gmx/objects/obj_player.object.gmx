@@ -264,18 +264,7 @@ glow_size = clamp(glow_size, 0.9, 1.1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>proj = instance_create(x, y, obj_projectile_curve);
-proj.end_x = mouse_x;
-proj.end_y = mouse_y;
-proj.dist = point_distance(x, y, mouse_x, mouse_y);
-
-// Start moving
-with (proj) {
-    dir = point_direction(x, y, mouse_x, mouse_y);
-    var xforce = lengthdir_x(50, dir);
-    var yforce = lengthdir_y(50, dir);
-    physics_apply_impulse(x, y, xforce, yforce);
-}
+            <string>
 
 </string>
           </argument>

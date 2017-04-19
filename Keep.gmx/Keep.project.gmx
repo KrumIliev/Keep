@@ -35,6 +35,12 @@
           <sprite>sprites\spr_spider_idle_up</sprite>
           <sprite>sprites\spr_spider_idle_right</sprite>
         </sprites>
+        <sprites name="attack">
+          <sprite>sprites\spr_spider_attack_up</sprite>
+          <sprite>sprites\spr_spider_attack_left</sprite>
+          <sprite>sprites\spr_spider_attack_down</sprite>
+          <sprite>sprites\spr_spider_attack_right</sprite>
+        </sprites>
       </sprites>
       <sprites name="golem">
         <sprites name="move">
@@ -120,6 +126,8 @@
       <sprite>sprites\spr_death_small</sprite>
       <sprite>sprites\spr_small_hit</sprite>
       <sprite>sprites\spr_large_hit</sprite>
+      <sprite>sprites\spr_green_cloud</sprite>
+      <sprite>sprites\spr_green_pond</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -187,6 +195,7 @@
       </scripts>
       <scripts name="attacks">
         <script>scripts\scr_enemy_golem_attack.gml</script>
+        <script>scripts\scr_enemy_spider_attack.gml</script>
       </scripts>
       <scripts name="states">
         <script>scripts\scr_enemy_state_idle.gml</script>
@@ -225,6 +234,8 @@
       <script>scripts\scr_fire_small_eye_projectile.gml</script>
     </scripts>
     <script>scripts\scr_draw_shadow.gml</script>
+    <script>scripts\scr_fire_curved_projectile.gml</script>
+    <script>scripts\scr_show_basic_effect.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_keep_medium</font>
@@ -235,26 +246,19 @@
     <object>objects\obj_projectile</object>
     <object>objects\obj_life_form</object>
     <objects name="effects">
-      <object>objects\obj_camera</object>
-      <object>objects\obj_dash_effect</object>
       <object>objects\obj_damage</object>
-      <object>objects\obj_attack_slash</object>
-      <object>objects\obj_flame_blast</object>
-      <object>objects\obj_flame_hit</object>
       <object>objects\obj_small_hit</object>
       <object>objects\obj_large_hit</object>
-      <object>objects\obj_flame</object>
-      <object>objects\obj_eye_projectile_large</object>
-      <object>objects\obj_eye_projectile_small</object>
-      <object>objects\obj_golem_slam</object>
-      <object>objects\obj_blood_explosion</object>
-      <object>objects\obj_death_large</object>
-      <object>objects\obj_death_small</object>
       <object>objects\obj_projectile_curve</object>
+      <object>objects\obj_basic_effect</object>
+      <object>objects\obj_basic_glow_effect</object>
     </objects>
     <objects name="player">
       <object>objects\obj_player</object>
       <object>objects\obj_player_stats</object>
+      <object>objects\obj_attack_slash</object>
+      <object>objects\obj_dash_effect</object>
+      <object>objects\obj_camera</object>
     </objects>
     <objects name="text">
       <object>objects\obj_speaker</object>
@@ -286,10 +290,6 @@
         </objects>
         <object>objects\obj_ground_torch</object>
         <object>objects\obj_portal</object>
-        <object>objects\obj_spike_trap</object>
-        <object>objects\obj_flame_blast_trap</object>
-        <object>objects\obj_flame_trap</object>
-        <object>objects\obj_eye_trap</object>
       </objects>
       <objects name="wall">
         <object>objects\obj_wall_decoration</object>
@@ -327,16 +327,46 @@
       </objects>
     </objects>
     <objects name="enemies">
-      <object>objects\obj_spider</object>
-      <object>objects\obj_golem</object>
       <object>objects\obj_enemy_parent</object>
       <object>objects\obj_enemy_pathfinder</object>
+      <objects name="spiders">
+        <object>objects\obj_spider</object>
+        <object>objects\obj_spider_pond</object>
+        <object>objects\obj_spider_projectile</object>
+        <object>objects\obj_spider_pond_cloud</object>
+      </objects>
+      <objects name="golem">
+        <object>objects\obj_golem</object>
+        <object>objects\obj_golem_slam</object>
+      </objects>
+      <objects name="effects">
+        <object>objects\obj_death_small</object>
+        <object>objects\obj_blood_explosion</object>
+        <object>objects\obj_death_large</object>
+      </objects>
     </objects>
     <objects name="animals">
       <object>objects\obj_fly</object>
       <object>objects\obj_mouse</object>
       <object>objects\obj_lizard</object>
       <object>objects\obj_animal</object>
+    </objects>
+    <objects name="traps">
+      <objects name="eye">
+        <object>objects\obj_eye_projectile_small</object>
+        <object>objects\obj_eye_projectile_large</object>
+        <object>objects\obj_eye_trap</object>
+      </objects>
+      <objects name="flame">
+        <object>objects\obj_flame_trap</object>
+        <object>objects\obj_flame</object>
+      </objects>
+      <object>objects\obj_spike_trap</object>
+      <objects name="fireball">
+        <object>objects\obj_flame_blast_trap</object>
+        <object>objects\obj_flame_hit</object>
+        <object>objects\obj_flame_blast</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

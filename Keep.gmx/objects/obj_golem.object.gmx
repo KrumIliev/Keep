@@ -31,6 +31,8 @@ image_speed = .17;
 
 attack_range = 64;
 attack_script = scr_enemy_golem_attack;
+attack_trigger_index = 4;
+
 
 // Create the sprite array
 sprite[RIGHT, MOVE] = spr_golem_move_right;

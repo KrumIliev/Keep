@@ -28,8 +28,9 @@
             <string>/// Init the spider
 event_inherited();
 
-attack_range = 64;
-attack_script = scr_enemy_golem_attack;
+attack_range = 200;
+attack_script = scr_enemy_spider_attack;
+attack_trigger_index = 2;
 
 // Create the sprite array
 sprite[RIGHT, MOVE] = spr_spider_move_right;
@@ -37,10 +38,10 @@ sprite[LEFT, MOVE] = spr_spider_move_left;
 sprite[UP, MOVE] = spr_spider_move_up;
 sprite[DOWN, MOVE] = spr_spider_move_down;
 
-sprite[RIGHT, ATTACK] = spr_spider_move_right;
-sprite[LEFT, ATTACK] = spr_spider_move_right;
-sprite[UP, ATTACK] = spr_spider_move_right;
-sprite[DOWN, ATTACK] = spr_spider_move_right;
+sprite[RIGHT, ATTACK] = spr_spider_attack_right;
+sprite[LEFT, ATTACK] = spr_spider_attack_left;
+sprite[UP, ATTACK] = spr_spider_attack_up;
+sprite[DOWN, ATTACK] = spr_spider_attack_down;
 
 sprite[RIGHT, IDLE] = spr_spider_idle_right;
 sprite[LEFT, IDLE] = spr_spider_idle_left;

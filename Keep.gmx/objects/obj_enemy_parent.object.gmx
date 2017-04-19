@@ -34,6 +34,7 @@ path.creator = id;
 
 attack_range = 64;
 attack_script = scr_enemy_golem_attack;
+attack_trigger_index = 0;
 can_attack = true;
 die_animation = obj_blood_explosion;
 die_blood = obj_death_large;
@@ -217,7 +218,6 @@ sprite_index = sprite[var_face, var_action];
             <kind>1</kind>
             <string>/// Stall for some time after attack
 if (state == scr_enemy_state_attack) {
-    can_attack = true;
     state = scr_enemy_state_idle;
     alarm[0] = room_speed;
 }

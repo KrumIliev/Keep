@@ -27,10 +27,9 @@
             <kind>1</kind>
             <string>phy_fixed_rotation = true;
 phy_bullet = true;
-image_index = 12;
-image_speed = 0;
 
 creator = noone;
+dist = 0;
 end_x = 0;
 end_y = 0;
 arc = 0;
@@ -38,6 +37,8 @@ arc_step = 2;
 
 shadow_scale = 1;
 shadow_step = 1;
+
+
 
 
 
