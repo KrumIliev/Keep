@@ -264,9 +264,7 @@ glow_size = clamp(glow_size, 0.9, 1.1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

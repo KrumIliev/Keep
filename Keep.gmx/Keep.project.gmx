@@ -68,7 +68,6 @@
     <sprite>sprites\spr_dialog_window</sprite>
     <sprites name="tiles">
       <sprite>sprites\spr_ground_dirt</sprite>
-      <sprite>sprites\spr_wall</sprite>
     </sprites>
     <sprites name="ground">
       <sprites name="portal">
@@ -128,6 +127,7 @@
       <sprite>sprites\spr_large_hit</sprite>
       <sprite>sprites\spr_green_cloud</sprite>
       <sprite>sprites\spr_green_pond</sprite>
+      <sprite>sprites\spr_blood_explosion_large</sprite>
     </sprites>
     <sprites name="walls">
       <sprite>sprites\spr_wall_sewer</sprite>
@@ -151,6 +151,7 @@
         <sprite>sprites\spr_wall_vent_leak</sprite>
       </sprites>
       <sprite>sprites\spr_void</sprite>
+      <sprite>sprites\spr_wall</sprite>
     </sprites>
     <sprite>sprites\spr_player_arrow</sprite>
     <sprite>sprites\spr_game_over</sprite>
@@ -167,10 +168,46 @@
         <sprite>sprites\spr_lizard_up</sprite>
       </sprites>
     </sprites>
+    <sprites name="main">
+      <sprite>sprites\spr_altar</sprite>
+      <sprite>sprites\spr_tables</sprite>
+      <sprite>sprites\spr_pilar</sprite>
+      <sprites name="npc">
+        <sprite>sprites\spr_npc_1_move_up</sprite>
+        <sprite>sprites\spr_npc_1_move_down</sprite>
+        <sprite>sprites\spr_npc_1_move_right</sprite>
+        <sprite>sprites\spr_npc_2_move_up</sprite>
+        <sprite>sprites\spr_npc_2_move_down</sprite>
+        <sprite>sprites\spr_npc_2_move_right</sprite>
+        <sprite>sprites\spr_npc_3_move_right</sprite>
+        <sprite>sprites\spr_npc_3_move_up</sprite>
+        <sprite>sprites\spr_npc_3_move_down</sprite>
+        <sprite>sprites\spr_npc_4_move_up</sprite>
+        <sprite>sprites\spr_npc_4_move_down</sprite>
+        <sprite>sprites\spr_npc_4_move_right</sprite>
+        <sprite>sprites\spr_npc_5_move_up</sprite>
+        <sprite>sprites\spr_npc_5_move_down</sprite>
+        <sprite>sprites\spr_npc_5_move_right</sprite>
+        <sprite>sprites\spr_npc_6_move_up</sprite>
+        <sprite>sprites\spr_npc_6_move_down</sprite>
+        <sprite>sprites\spr_npc_6_move_right</sprite>
+        <sprite>sprites\spr_npc_7_move_up</sprite>
+        <sprite>sprites\spr_npc_7_move_down</sprite>
+        <sprite>sprites\spr_npc_7_move_right</sprite>
+        <sprite>sprites\spr_npc_8_move_up</sprite>
+        <sprite>sprites\spr_npc_8_move_down</sprite>
+        <sprite>sprites\spr_npc_8_move_right</sprite>
+        <sprite>sprites\spr_npc_9_move_up</sprite>
+        <sprite>sprites\spr_npc_9_move_down</sprite>
+        <sprite>sprites\spr_npc_9_move_right</sprite>
+      </sprites>
+      <sprite>sprites\spr_cell</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_crypt</background>
     <background>background\bg_sewer</background>
+    <background>background\bg_main</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -236,6 +273,11 @@
     <script>scripts\scr_draw_shadow.gml</script>
     <script>scripts\scr_fire_curved_projectile.gml</script>
     <script>scripts\scr_show_basic_effect.gml</script>
+    <scripts name="npc">
+      <script>scripts\scr_npc_idle.gml</script>
+      <script>scripts\scr_npc_move.gml</script>
+      <script>scripts\scr_npc_choose.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_keep_medium</font>
@@ -368,8 +410,16 @@
         <object>objects\obj_flame_blast</object>
       </objects>
     </objects>
+    <objects name="main">
+      <object>objects\obj_altar</object>
+      <object>objects\obj_tables</object>
+      <object>objects\obj_pilar</object>
+      <object>objects\obj_npc</object>
+      <object>objects\obj_cell</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_main</room>
     <room>rooms\rm_generator</room>
     <room>rooms\rm_test</room>
   </rooms>
